@@ -1,0 +1,38 @@
+id,year,qnum,raw_subject,subtopic,format,data_quality_flags
+UPSC-2018-GS1-Q061,2018,61,Science & Technology,Space Technology & Astronomy,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2018-GS1-Q062,2018,62,Science & Technology,Physics,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2018-GS1-Q064,2018,64,Science & Technology,Computer & Information Technology,Match/Pair,SOURCE_BLANKED_FIELDS
+UPSC-2018-GS1-Q076,2018,76,Modern History,British Administration & Economic Policies,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2020-GS1-Q027,2020,27,Modern History,Gandhian Mass Movements (1915-1942),Multi-statement,CANCELLED
+UPSC-2020-GS1-Q052,2020,52,Indian Economy,External Sector & Balance Of Payments,Multi-statement,CANCELLED
+UPSC-2021-GS1-Q080,2021,80,Indian Polity,Elections & Electoral Reforms,Multi-statement,CANCELLED
+UPSC-2022-GS1-Q061,2022,61,Indian Economy,External Sector & Balance Of Payments,Multi-statement,CANCELLED
+UPSC-2023-GS1-Q034,2023,34,Indian Polity,Constitutional Framework & Development,Single-answer,CANCELLED
+UPSC-2024-GS1-Q020,2024,20,Environment & Ecology,Environmental Governance & Legislation,Assertion/Relationship,CANCELLED
+UPSC-2024-GS1-Q023,2024,23,Environment & Ecology,Protected Areas & Wildlife,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q025,2024,25,Environment & Ecology,Ecosystems & Ecology Concepts,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q027,2024,27,Science & Technology,Energy & Environment,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q029,2024,29,Environment & Ecology,Ecosystems & Ecology Concepts,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q030,2024,30,Environment & Ecology,Biodiversity & Conservation,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q031,2024,31,Science & Technology,Energy & Environment,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q034,2024,34,Science & Technology,Defence Technology,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q035,2024,35,Science & Technology,Defence Technology,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q036,2024,36,Science and Technology,Chemistry,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q052,2024,52,Indian Economy,Banking & Financial Sector,Assertion/Relationship,CANCELLED
+UPSC-2024-GS1-Q057,2024,57,Modern History,Modern India,Multi-statement,CANCELLED
+UPSC-2024-GS1-Q065,2024,65,Art & Culture,Architecture & World Heritage,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q066,2024,66,Indian Polity,Constitutional Framework & Development,Single-answer,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q067,2024,67,Geography,World Demographics,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q068,2024,68,Polity,Parliamentary Procedures,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q069,2024,69,Science & Technology,Defence Technology,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q070,2024,70,Indian Polity,Constitutional & Statutory Bodies,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q072,2024,72,Indian Polity,Constitutional Framework & Development,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q073,2024,73,Modern History,Post-Independence India,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q074,2024,74,Polity,Constitutional Provisions,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q077,2024,77,Polity,Defence,Single-answer,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q098,2024,98,Indian Economy,Agriculture & Rural Development,Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2024-GS1-Q100,2024,100,Indian Economy,"Human Development, Poverty & Employment Schemes",Multi-statement,SOURCE_BLANKED_FIELDS
+UPSC-2025-GS1-Q079,2025,79,Geography,World Geography,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2025-GS1-Q080,2025,80,Geography,World Geography,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2025-GS1-Q084,2025,84,Science and Technology,Defence Technology,How-many/Count,SOURCE_BLANKED_FIELDS
+UPSC-2025-GS1-Q096,2025,96,International Relations,International Organizations,How-many/Count,SOURCE_BLANKED_FIELDS

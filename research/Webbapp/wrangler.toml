@@ -1,0 +1,10 @@
+name = "precision-upsc-study-os"
+compatibility_date = "2026-09-25"
+pages_build_output_dir = "."
+
+# Cloudflare Pages Advanced Mode uses _worker.js in the output directory.
+# Bind a D1 database named DB for optional cloud sync.
+[[d1_databases]]
+binding = "DB"
+database_name = "precision-study-os"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

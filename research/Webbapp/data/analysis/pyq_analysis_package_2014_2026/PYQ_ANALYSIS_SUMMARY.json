@@ -1,0 +1,880 @@
+{
+  "qa": {
+    "nominal_questions_2014_2025": 1200,
+    "nominal_questions_2014_2026": 1300,
+    "valid_4_options": 1200,
+    "valid_answer_letters": 1200,
+    "cancelled_2014_2025": 8,
+    "flagged_source_blank": 37,
+    "explicit_current_affairs": 78,
+    "news_cue": 89,
+    "negative_stems": 112,
+    "elimination_compatible": 706,
+    "direct_single_answer": 494,
+    "median_stem_words": 38.0
+  },
+  "subject_aggregate": {
+    "Economy": 241,
+    "Environment & Ecology": 213,
+    "Polity & Governance": 169,
+    "Science & Technology": 163,
+    "History": 140,
+    "Geography": 129,
+    "Current Affairs": 78,
+    "Art & Culture": 61,
+    "International Relations": 5,
+    "Sports": 1
+  },
+  "subject_year": {
+    "2014": {
+      "Economy": 14,
+      "Environment & Ecology": 22,
+      "Polity & Governance": 10,
+      "Science & Technology": 17,
+      "History": 8,
+      "Geography": 13,
+      "Current Affairs": 3,
+      "Art & Culture": 13,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2015": {
+      "Economy": 23,
+      "Environment & Ecology": 18,
+      "Polity & Governance": 12,
+      "Science & Technology": 10,
+      "History": 13,
+      "Geography": 11,
+      "Current Affairs": 9,
+      "Art & Culture": 4,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2016": {
+      "Economy": 26,
+      "Environment & Ecology": 22,
+      "Polity & Governance": 5,
+      "Science & Technology": 13,
+      "History": 12,
+      "Geography": 6,
+      "Current Affairs": 11,
+      "Art & Culture": 5,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2017": {
+      "Economy": 26,
+      "Environment & Ecology": 16,
+      "Polity & Governance": 22,
+      "Science & Technology": 10,
+      "History": 10,
+      "Geography": 6,
+      "Current Affairs": 5,
+      "Art & Culture": 4,
+      "International Relations": 1,
+      "Sports": 0
+    },
+    "2018": {
+      "Economy": 20,
+      "Environment & Ecology": 15,
+      "Polity & Governance": 14,
+      "Science & Technology": 15,
+      "History": 15,
+      "Geography": 8,
+      "Current Affairs": 6,
+      "Art & Culture": 7,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2019": {
+      "Economy": 26,
+      "Environment & Ecology": 18,
+      "Polity & Governance": 14,
+      "Science & Technology": 16,
+      "History": 11,
+      "Geography": 9,
+      "Current Affairs": 2,
+      "Art & Culture": 4,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2020": {
+      "Economy": 21,
+      "Environment & Ecology": 19,
+      "Polity & Governance": 16,
+      "Science & Technology": 14,
+      "History": 18,
+      "Geography": 8,
+      "Current Affairs": 2,
+      "Art & Culture": 2,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2021": {
+      "Economy": 15,
+      "Environment & Ecology": 24,
+      "Polity & Governance": 17,
+      "Science & Technology": 12,
+      "History": 15,
+      "Geography": 7,
+      "Current Affairs": 5,
+      "Art & Culture": 5,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2022": {
+      "Economy": 17,
+      "Environment & Ecology": 17,
+      "Polity & Governance": 11,
+      "Science & Technology": 17,
+      "History": 12,
+      "Geography": 12,
+      "Current Affairs": 10,
+      "Art & Culture": 4,
+      "International Relations": 0,
+      "Sports": 0
+    },
+    "2023": {
+      "Economy": 17,
+      "Environment & Ecology": 15,
+      "Polity & Governance": 15,
+      "Science & Technology": 10,
+      "History": 7,
+      "Geography": 18,
+      "Current Affairs": 10,
+      "Art & Culture": 6,
+      "International Relations": 1,
+      "Sports": 1
+    },
+    "2024": {
+      "Economy": 15,
+      "Environment & Ecology": 14,
+      "Polity & Governance": 20,
+      "Science & Technology": 13,
+      "History": 4,
+      "Geography": 18,
+      "Current Affairs": 9,
+      "Art & Culture": 6,
+      "International Relations": 1,
+      "Sports": 0
+    },
+    "2025": {
+      "Economy": 21,
+      "Environment & Ecology": 13,
+      "Polity & Governance": 13,
+      "Science & Technology": 16,
+      "History": 15,
+      "Geography": 13,
+      "Current Affairs": 6,
+      "Art & Culture": 1,
+      "International Relations": 2,
+      "Sports": 0
+    }
+  },
+  "difficulty_year": {
+    "2014": {
+      "easy": 41,
+      "moderate": 57,
+      "difficult": 2
+    },
+    "2015": {
+      "easy": 45,
+      "moderate": 54,
+      "difficult": 1
+    },
+    "2016": {
+      "easy": 46,
+      "moderate": 54,
+      "difficult": 0
+    },
+    "2017": {
+      "easy": 38,
+      "moderate": 59,
+      "difficult": 3
+    },
+    "2018": {
+      "easy": 36,
+      "moderate": 60,
+      "difficult": 4
+    },
+    "2019": {
+      "easy": 35,
+      "moderate": 58,
+      "difficult": 7
+    },
+    "2020": {
+      "easy": 29,
+      "moderate": 63,
+      "difficult": 8
+    },
+    "2021": {
+      "easy": 40,
+      "moderate": 51,
+      "difficult": 9
+    },
+    "2022": {
+      "easy": 31,
+      "moderate": 66,
+      "difficult": 3
+    },
+    "2023": {
+      "easy": 29,
+      "moderate": 62,
+      "difficult": 9
+    },
+    "2024": {
+      "easy": 35,
+      "moderate": 59,
+      "difficult": 6
+    },
+    "2025": {
+      "easy": 30,
+      "moderate": 66,
+      "difficult": 4
+    }
+  },
+  "format_year": {
+    "2014": {
+      "Single-answer": 46,
+      "Multi-statement": 42,
+      "How-many/Count": 0,
+      "Match/Pair": 12,
+      "Assertion/Relationship": 0
+    },
+    "2015": {
+      "Single-answer": 59,
+      "Multi-statement": 39,
+      "How-many/Count": 0,
+      "Match/Pair": 2,
+      "Assertion/Relationship": 0
+    },
+    "2016": {
+      "Single-answer": 53,
+      "Multi-statement": 43,
+      "How-many/Count": 0,
+      "Match/Pair": 4,
+      "Assertion/Relationship": 0
+    },
+    "2017": {
+      "Single-answer": 53,
+      "Multi-statement": 44,
+      "How-many/Count": 0,
+      "Match/Pair": 3,
+      "Assertion/Relationship": 0
+    },
+    "2018": {
+      "Single-answer": 42,
+      "Multi-statement": 55,
+      "How-many/Count": 0,
+      "Match/Pair": 3,
+      "Assertion/Relationship": 0
+    },
+    "2019": {
+      "Single-answer": 51,
+      "Multi-statement": 43,
+      "How-many/Count": 0,
+      "Match/Pair": 6,
+      "Assertion/Relationship": 0
+    },
+    "2020": {
+      "Single-answer": 41,
+      "Multi-statement": 54,
+      "How-many/Count": 0,
+      "Match/Pair": 5,
+      "Assertion/Relationship": 0
+    },
+    "2021": {
+      "Single-answer": 46,
+      "Multi-statement": 53,
+      "How-many/Count": 0,
+      "Match/Pair": 1,
+      "Assertion/Relationship": 0
+    },
+    "2022": {
+      "Single-answer": 30,
+      "Multi-statement": 61,
+      "How-many/Count": 8,
+      "Match/Pair": 1,
+      "Assertion/Relationship": 0
+    },
+    "2023": {
+      "Single-answer": 28,
+      "Multi-statement": 7,
+      "How-many/Count": 47,
+      "Match/Pair": 0,
+      "Assertion/Relationship": 18
+    },
+    "2024": {
+      "Single-answer": 27,
+      "Multi-statement": 42,
+      "How-many/Count": 18,
+      "Match/Pair": 0,
+      "Assertion/Relationship": 13
+    },
+    "2025": {
+      "Single-answer": 18,
+      "Multi-statement": 41,
+      "How-many/Count": 27,
+      "Match/Pair": 0,
+      "Assertion/Relationship": 14
+    }
+  },
+  "statement_load_year": {
+    "2014": {
+      "0": 36,
+      "1": 0,
+      "2": 11,
+      "3": 36,
+      "4": 15,
+      "5": 2
+    },
+    "2015": {
+      "0": 54,
+      "1": 0,
+      "2": 15,
+      "3": 23,
+      "4": 5,
+      "5": 3
+    },
+    "2016": {
+      "0": 44,
+      "1": 0,
+      "2": 21,
+      "3": 31,
+      "4": 2,
+      "5": 2
+    },
+    "2017": {
+      "0": 42,
+      "1": 0,
+      "2": 22,
+      "3": 32,
+      "4": 4,
+      "5": 0
+    },
+    "2018": {
+      "0": 41,
+      "1": 1,
+      "2": 22,
+      "3": 24,
+      "4": 8,
+      "5": 4
+    },
+    "2019": {
+      "0": 48,
+      "1": 0,
+      "2": 12,
+      "3": 25,
+      "4": 12,
+      "5": 3
+    },
+    "2020": {
+      "0": 36,
+      "1": 0,
+      "2": 6,
+      "3": 29,
+      "4": 23,
+      "5": 6
+    },
+    "2021": {
+      "0": 42,
+      "1": 0,
+      "2": 14,
+      "3": 29,
+      "4": 8,
+      "5": 7
+    },
+    "2022": {
+      "0": 28,
+      "1": 0,
+      "2": 12,
+      "3": 35,
+      "4": 19,
+      "5": 6
+    },
+    "2023": {
+      "0": 45,
+      "1": 1,
+      "2": 7,
+      "3": 30,
+      "4": 15,
+      "5": 2
+    },
+    "2024": {
+      "0": 39,
+      "1": 1,
+      "2": 33,
+      "3": 16,
+      "4": 10,
+      "5": 1
+    },
+    "2025": {
+      "0": 31,
+      "1": 0,
+      "2": 16,
+      "3": 38,
+      "4": 10,
+      "5": 5
+    }
+  },
+  "elimination_compatible_year": {
+    "2014": 54,
+    "2015": 41,
+    "2016": 47,
+    "2017": 47,
+    "2018": 58,
+    "2019": 49,
+    "2020": 59,
+    "2021": 54,
+    "2022": 70,
+    "2023": 72,
+    "2024": 73,
+    "2025": 82
+  },
+  "negative_stem_year": {
+    "2014": 5,
+    "2015": 7,
+    "2016": 5,
+    "2017": 11,
+    "2018": 11,
+    "2019": 17,
+    "2020": 15,
+    "2021": 6,
+    "2022": 11,
+    "2023": 4,
+    "2024": 9,
+    "2025": 11
+  },
+  "period_subject_averages": {
+    "2014-2018": {
+      "Economy": 21.8,
+      "Environment & Ecology": 18.6,
+      "Polity & Governance": 12.6,
+      "Science & Technology": 13.0,
+      "History": 11.6,
+      "Geography": 8.8,
+      "Current Affairs": 6.8,
+      "Art & Culture": 6.6,
+      "International Relations": 0.2,
+      "Sports": 0.0
+    },
+    "2019-2023": {
+      "Economy": 19.2,
+      "Environment & Ecology": 18.6,
+      "Polity & Governance": 14.6,
+      "Science & Technology": 13.8,
+      "History": 12.6,
+      "Geography": 10.8,
+      "Current Affairs": 5.8,
+      "Art & Culture": 4.2,
+      "International Relations": 0.2,
+      "Sports": 0.2
+    },
+    "2024-2025": {
+      "Economy": 18.0,
+      "Environment & Ecology": 13.5,
+      "Polity & Governance": 16.5,
+      "Science & Technology": 14.5,
+      "History": 9.5,
+      "Geography": 15.5,
+      "Current Affairs": 7.5,
+      "Art & Culture": 3.5,
+      "International Relations": 1.5,
+      "Sports": 0.0
+    },
+    "2022-2025": {
+      "Economy": 17.5,
+      "Environment & Ecology": 14.75,
+      "Polity & Governance": 14.75,
+      "Science & Technology": 14.0,
+      "History": 9.5,
+      "Geography": 15.25,
+      "Current Affairs": 8.75,
+      "Art & Culture": 4.25,
+      "International Relations": 1.0,
+      "Sports": 0.25
+    }
+  },
+  "top_topics": [
+    {
+      "subtopic": "Computer & Information Technology",
+      "all_2014_25": 32,
+      "years_present": 10,
+      "early_2014_18": 14.0,
+      "recent_2021_25": 8.0
+    },
+    {
+      "subtopic": "Agriculture & Rural Development",
+      "all_2014_25": 29,
+      "years_present": 11,
+      "early_2014_18": 15.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "International Environmental Treaties & Summits",
+      "all_2014_25": 29,
+      "years_present": 10,
+      "early_2014_18": 22.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Parliament & State Legislatures",
+      "all_2014_25": 28,
+      "years_present": 12,
+      "early_2014_18": 15.0,
+      "recent_2021_25": 8.0
+    },
+    {
+      "subtopic": "International Organisations & Groupings",
+      "all_2014_25": 25,
+      "years_present": 11,
+      "early_2014_18": 12.0,
+      "recent_2021_25": 12.0
+    },
+    {
+      "subtopic": "Constitutional Framework & Development",
+      "all_2014_25": 25,
+      "years_present": 9,
+      "early_2014_18": 4.0,
+      "recent_2021_25": 15.0
+    },
+    {
+      "subtopic": "Pollution & Waste Management",
+      "all_2014_25": 24,
+      "years_present": 10,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 13.0
+    },
+    {
+      "subtopic": "Protected Areas & Wildlife",
+      "all_2014_25": 24,
+      "years_present": 9,
+      "early_2014_18": 12.0,
+      "recent_2021_25": 2.0
+    },
+    {
+      "subtopic": "Ecosystems & Ecology Concepts",
+      "all_2014_25": 23,
+      "years_present": 9,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 13.0
+    },
+    {
+      "subtopic": "Sustainable Agriculture & Forestry",
+      "all_2014_25": 23,
+      "years_present": 8,
+      "early_2014_18": 10.0,
+      "recent_2021_25": 9.0
+    },
+    {
+      "subtopic": "Climate Change & Greenhouse Gases",
+      "all_2014_25": 22,
+      "years_present": 11,
+      "early_2014_18": 8.0,
+      "recent_2021_25": 11.0
+    },
+    {
+      "subtopic": "Financial Markets & Capital Markets",
+      "all_2014_25": 21,
+      "years_present": 10,
+      "early_2014_18": 4.0,
+      "recent_2021_25": 14.0
+    },
+    {
+      "subtopic": "Human Development, Poverty & Employment Schemes",
+      "all_2014_25": 21,
+      "years_present": 7,
+      "early_2014_18": 10.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Energy & Environment",
+      "all_2014_25": 20,
+      "years_present": 11,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 8.0
+    },
+    {
+      "subtopic": "Fiscal Policy & Budget",
+      "all_2014_25": 20,
+      "years_present": 10,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 9.0
+    },
+    {
+      "subtopic": "Health & Diseases",
+      "all_2014_25": 20,
+      "years_present": 10,
+      "early_2014_18": 8.0,
+      "recent_2021_25": 9.0
+    },
+    {
+      "subtopic": "Biotechnology & Genetics",
+      "all_2014_25": 19,
+      "years_present": 11,
+      "early_2014_18": 7.0,
+      "recent_2021_25": 7.0
+    },
+    {
+      "subtopic": "Environmental Governance & Legislation",
+      "all_2014_25": 19,
+      "years_present": 11,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 7.0
+    },
+    {
+      "subtopic": "Atmosphere & Climatology",
+      "all_2014_25": 19,
+      "years_present": 10,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 12.0
+    },
+    {
+      "subtopic": "Biodiversity & Conservation",
+      "all_2014_25": 19,
+      "years_present": 10,
+      "early_2014_18": 10.0,
+      "recent_2021_25": 7.0
+    },
+    {
+      "subtopic": "Space Technology & Astronomy",
+      "all_2014_25": 18,
+      "years_present": 12,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Digital Payments & Financial Inclusion",
+      "all_2014_25": 18,
+      "years_present": 10,
+      "early_2014_18": 11.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Banking & Financial Sector",
+      "all_2014_25": 18,
+      "years_present": 9,
+      "early_2014_18": 7.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Infrastructure & Industry",
+      "all_2014_25": 18,
+      "years_present": 8,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "International Relations & Treaties",
+      "all_2014_25": 17,
+      "years_present": 8,
+      "early_2014_18": 8.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Defence Technology",
+      "all_2014_25": 16,
+      "years_present": 8,
+      "early_2014_18": 4.0,
+      "recent_2021_25": 11.0
+    },
+    {
+      "subtopic": "International Institutions & Reports",
+      "all_2014_25": 16,
+      "years_present": 8,
+      "early_2014_18": 10.0,
+      "recent_2021_25": 2.0
+    },
+    {
+      "subtopic": "Philosophy & Religion",
+      "all_2014_25": 15,
+      "years_present": 9,
+      "early_2014_18": 6.0,
+      "recent_2021_25": 7.0
+    },
+    {
+      "subtopic": "Judiciary",
+      "all_2014_25": 15,
+      "years_present": 8,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 7.0
+    },
+    {
+      "subtopic": "External Sector & Balance Of Payments",
+      "all_2014_25": 15,
+      "years_present": 7,
+      "early_2014_18": 4.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Union & State Executive",
+      "all_2014_25": 14,
+      "years_present": 10,
+      "early_2014_18": 9.0,
+      "recent_2021_25": 3.0
+    },
+    {
+      "subtopic": "Indian Physical Geography",
+      "all_2014_25": 13,
+      "years_present": 10,
+      "early_2014_18": 6.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Constitutional Developments & British Plans (1909-1947)",
+      "all_2014_25": 13,
+      "years_present": 9,
+      "early_2014_18": 8.0,
+      "recent_2021_25": 4.0
+    },
+    {
+      "subtopic": "Indian Rivers & Water Resources",
+      "all_2014_25": 13,
+      "years_present": 9,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Monetary Policy & Money Supply",
+      "all_2014_25": 13,
+      "years_present": 8,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Architecture & World Heritage",
+      "all_2014_25": 12,
+      "years_present": 9,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Indian Agriculture & Land Use",
+      "all_2014_25": 11,
+      "years_present": 8,
+      "early_2014_18": 2.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "International Trade & WTO",
+      "all_2014_25": 11,
+      "years_present": 8,
+      "early_2014_18": 6.0,
+      "recent_2021_25": 2.0
+    },
+    {
+      "subtopic": "World Political Geography & Borders",
+      "all_2014_25": 11,
+      "years_present": 8,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Biology",
+      "all_2014_25": 11,
+      "years_present": 6,
+      "early_2014_18": 6.0,
+      "recent_2021_25": 3.0
+    },
+    {
+      "subtopic": "Indian Government Schemes & Initiatives",
+      "all_2014_25": 11,
+      "years_present": 6,
+      "early_2014_18": 7.0,
+      "recent_2021_25": 4.0
+    },
+    {
+      "subtopic": "Federalism & Centre–State Relations",
+      "all_2014_25": 10,
+      "years_present": 9,
+      "early_2014_18": 3.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Gandhian Mass Movements (1915-1942)",
+      "all_2014_25": 10,
+      "years_present": 8,
+      "early_2014_18": 5.0,
+      "recent_2021_25": 3.0
+    },
+    {
+      "subtopic": "Early Nationalism & Indian National Congress (1885-1915)",
+      "all_2014_25": 10,
+      "years_present": 7,
+      "early_2014_18": 7.0,
+      "recent_2021_25": 1.0
+    },
+    {
+      "subtopic": "Renewable Energy & Green Technologies",
+      "all_2014_25": 10,
+      "years_present": 6,
+      "early_2014_18": 2.0,
+      "recent_2021_25": 4.0
+    },
+    {
+      "subtopic": "International Conflicts & Security",
+      "all_2014_25": 10,
+      "years_present": 5,
+      "early_2014_18": 4.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "British Administration & Economic Policies",
+      "all_2014_25": 10,
+      "years_present": 3,
+      "early_2014_18": 6.0,
+      "recent_2021_25": 0.0
+    },
+    {
+      "subtopic": "Literature & Languages",
+      "all_2014_25": 9,
+      "years_present": 8,
+      "early_2014_18": 3.0,
+      "recent_2021_25": 5.0
+    },
+    {
+      "subtopic": "Constitutional & Statutory Bodies",
+      "all_2014_25": 9,
+      "years_present": 6,
+      "early_2014_18": 1.0,
+      "recent_2021_25": 6.0
+    },
+    {
+      "subtopic": "Social & Religious Reform Movements",
+      "all_2014_25": 9,
+      "years_present": 5,
+      "early_2014_18": 3.0,
+      "recent_2021_25": 4.0
+    }
+  ],
+  "2026_subject_count": {
+    "History": 13,
+    "Art & Culture": 8,
+    "Geography": 7,
+    "Environment & Ecology": 8,
+    "Economy": 18,
+    "Science & Technology": 15,
+    "Polity & Governance": 9,
+    "Current Affairs + International Relations": 19,
+    "Ethics/Governance Case": 3
+  },
+  "2026_format_count": {
+    "Coded statement": 55,
+    "Direct single-answer": 19,
+    "How-many/count": 7,
+    "Statement relationship/inference": 7,
+    "Match pairs": 4,
+    "Match list": 4,
+    "Scenario/case study": 4
+  },
+  "2026_source_estimates": {
+    "PIB/Government press releases": 24,
+    "NCERT": 22,
+    "Current-affairs news": 16,
+    "Domain-specific sources": 10,
+    "Standard references": 10,
+    "International-organisation sites": 8,
+    "Acts/statutes": 6,
+    "Yojana/Kurukshetra": 4
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "historical_text_extraction": "100 questions/year for 2017-2025",
+  "identified_answer_conflicts": 7,
+  "classification_anomalies_flagged": [
+    "UPSC-2017-GS1-Q008"
+  ],
+  "2026_question_inventory": 100,
+  "2026_full_scanned_stems_included": false,
+  "2026_public_topic_titles_included": 100,
+  "primary_source_status": "UNVERIFIED unless separately proposition-verified; no setter-source claim",
+  "post_2026_mock_cutoff": "2026-05-25"
+}

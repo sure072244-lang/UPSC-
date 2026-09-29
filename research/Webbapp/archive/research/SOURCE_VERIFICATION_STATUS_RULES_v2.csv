@@ -1,0 +1,6 @@
+status,definition
+PRIMARY_VERIFIED,Dated primary institutional document <= PYQ year + exact proposition-level match
+PRIMARY_CANDIDATE,"Strong primary candidate located, but exact proposition/archival evidence still requires checking"
+SECONDARY_CLAIM_ONLY,"Coaching/analysis source names a source, but underlying primary evidence is not proven"
+UNVERIFIED,No defensible source attribution established
+RETROSPECTIVE_ONLY,"Published after PYQ year; usable only as corroboration, never as original-source field"

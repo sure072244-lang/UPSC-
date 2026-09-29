@@ -1,0 +1,27 @@
+{
+  "build": "PRECISION UPSC CSE Prelims 2027 Training Portal v3",
+  "status": "training/research mode",
+  "pyq_scope": "2017-2026",
+  "pyq_records": 1000,
+  "current_mock_cutoff": "2026-05-25",
+  "mock_generation": false,
+  "data_layers": [
+    {"id":"pyq","file":"pyq_1000_descriptive_source_tracking_v2.csv","records":1000,"role":"historical PYQ master"},
+    {"id":"year","file":"year_analysis_2017_2026_v2.csv","records":10,"role":"year-wise analytics"},
+    {"id":"answerqa","file":"pyq_answer_qa_flags_v2.csv","role":"answer-key QA"},
+    {"id":"gates","file":"qa_gates_v2.csv","role":"release/QA gates"},
+    {"id":"sources","file":"source_registry_post_2026_v2.csv","role":"source registry"},
+    {"id":"research","file":"research_sources_post_2026_v3.csv","role":"post-2026 professional public source registry"},
+    {"id":"findings","file":"research_findings_post_2026_v3.json","role":"current trend/evidence synthesis"},
+    {"id":"mocks","file":"post_2026_mock_ecosystem_v2.csv","role":"post-2026 mock ecosystem"},
+    {"id":"quizzes","file":"current_quiz_stream_post_2026.csv","role":"post-2026 public quiz stream"},
+    {"id":"state","file":"training_state_v2.json","role":"training state"},
+    {"id":"report","file":"training_state_report_v2.md","role":"audit report"},
+    {"id":"workbook","file":"../downloads/PRECISION_UPSC_Training_State_2017_2026_v2.xlsx","role":"offline workbook snapshot"}
+  ],
+  "access": {
+    "download_all": "all files in /data and /downloads are exposed in Data Vault",
+    "search": "client-side search across loaded CSV fields",
+    "offline": "PWA service worker caches the portal shell and training data"
+  }
+}

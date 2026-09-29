@@ -1,0 +1,140 @@
+[
+  {
+    "id": "GS1",
+    "label": "Indian Polity",
+    "group": "GS / Prelims",
+    "accent": "#4f79ff"
+  },
+  {
+    "id": "GOV",
+    "label": "Governance",
+    "group": "GS / Mains",
+    "accent": "#2b7de9"
+  },
+  {
+    "id": "SOCJUST",
+    "label": "Social Justice",
+    "group": "GS / Mains",
+    "accent": "#7a5cff"
+  },
+  {
+    "id": "IR",
+    "label": "International Relations",
+    "group": "GS / Mains",
+    "accent": "#1e9b96"
+  },
+  {
+    "id": "ECO",
+    "label": "Economy",
+    "group": "GS / Prelims",
+    "accent": "#c88219"
+  },
+  {
+    "id": "AGRI",
+    "label": "Agriculture",
+    "group": "GS / Prelims",
+    "accent": "#4b8b45"
+  },
+  {
+    "id": "ENV",
+    "label": "Environment & Ecology",
+    "group": "GS / Prelims",
+    "accent": "#2d9b68"
+  },
+  {
+    "id": "GEO",
+    "label": "Geography",
+    "group": "GS / Prelims",
+    "accent": "#3576c8"
+  },
+  {
+    "id": "DIS",
+    "label": "Disaster Management",
+    "group": "GS / Mains",
+    "accent": "#b35f3f"
+  },
+  {
+    "id": "SEC",
+    "label": "Internal Security",
+    "group": "GS / Mains",
+    "accent": "#9b4d7b"
+  },
+  {
+    "id": "SNT",
+    "label": "Science & Technology",
+    "group": "GS / Prelims",
+    "accent": "#3d63a8"
+  },
+  {
+    "id": "ANCIENT",
+    "label": "Ancient History",
+    "group": "GS / Prelims",
+    "accent": "#8a6b3f"
+  },
+  {
+    "id": "MEDIEVAL",
+    "label": "Medieval History",
+    "group": "GS / Prelims",
+    "accent": "#9a6b55"
+  },
+  {
+    "id": "MODERN",
+    "label": "Modern History",
+    "group": "GS / Prelims",
+    "accent": "#b84c4c"
+  },
+  {
+    "id": "POSTIND",
+    "label": "Post-Independence",
+    "group": "GS / Mains",
+    "accent": "#7258a8"
+  },
+  {
+    "id": "WORLD",
+    "label": "World History",
+    "group": "GS / Mains",
+    "accent": "#446e8a"
+  },
+  {
+    "id": "CULTURE",
+    "label": "Art & Culture",
+    "group": "GS / Prelims",
+    "accent": "#a45f90"
+  },
+  {
+    "id": "SOCIETY",
+    "label": "Indian Society",
+    "group": "GS / Mains",
+    "accent": "#8b6f47"
+  },
+  {
+    "id": "ETHICS",
+    "label": "GS-IV Ethics",
+    "group": "GS / Mains",
+    "accent": "#7b7fba"
+  },
+  {
+    "id": "ESSAY",
+    "label": "Essay",
+    "group": "Mains",
+    "accent": "#2e8275"
+  },
+  {
+    "id": "CSAT",
+    "label": "CSAT",
+    "group": "Prelims Paper-II",
+    "accent": "#5c78b8"
+  },
+  {
+    "id": "PHILO",
+    "label": "Philosophy Optional",
+    "group": "Optional",
+    "accent": "#8058b7"
+  },
+  {
+    "id": "CURRENT",
+    "label": "Current Affairs",
+    "group": "Cross-cutting",
+    "accent": "#c06a27"
+  }
+]

@@ -1,0 +1,8 @@
+year,qnum,metadata_answer,public_reproduction_answer,status,action
+2020,27,c,a,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2020,52,c,a,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2021,80,c,d,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2022,61,c,d,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2023,34,c,a,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2024,52,c,d,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.
+2024,57,c,b,CONFLICT,Do not overwrite either key; reconcile against authoritative answer-key record before mock reuse.

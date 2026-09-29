@@ -1,0 +1,31 @@
+{
+  "schema_version": "pyq-intel-v1",
+  "scope": "UPSC CSE Prelims GS Paper-I 2014-2026",
+  "nominal_questions": 1300,
+  "2014_2025_question_metadata": 1200,
+  "2026_basis": "Official uploaded UPSC paper for layout/visual truth + current question-by-question external structural analysis for counts",
+  "hard_constraints_for_future_mocks": [
+    "100 GS-I questions",
+    "200 marks",
+    "120 minutes",
+    "4 options per question",
+    "bilingual English + Hindi",
+    "one canonical question ID for both languages",
+    "provenance attached to every question",
+    "no unverified source-flagged question allowed into final pool",
+    "no near-duplicate paraphrase of PYQ"
+  ],
+  "generation_layers": [
+    "2026 format grammar",
+    "long-run 2014-2025 subject priors",
+    "recent trend shift",
+    "topic recurrence",
+    "current-affairs linkage",
+    "elimination/distractor architecture",
+    "difficulty calibration",
+    "similarity/deduplication",
+    "bilingual semantic-equivalence check"
+  ],
+  "source_policy": "Exact question-level provenance is attached only when independently verified. Supplied PDFs do not provide a complete source bibliography.",
+  "qa_policy": "Any source-blanked or otherwise flagged record is excluded from automatic generation until independently verified."
+}

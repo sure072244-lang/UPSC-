@@ -1,0 +1,13 @@
+gate_id,area,rule,release_requirement,current_state
+QG-01,Paper provenance,Official UPSC paper is the source-of-record,Required for all PYQs,PASS for official archive anchor
+QG-02,Question-text extraction,2017-2025 text extracted from public reproductions; 2026 title/topic inventory only in this build,Do not treat reproduction as setter source,PASS with 2026 limitation documented
+QG-03,Primary source year gate,Primary source publication date <= PYQ year,Later sources are retrospective only,HARD GATE
+QG-04,Setter attribution discipline,UPSC does not publish setter-source attribution,Do not label secondary claims as UPSC-setter provenance,HARD GATE
+QG-05,Proposition-level evidence,Primary source must support the exact proposition tested,Subject similarity alone is insufficient,HARD GATE
+QG-06,Answer integrity,Use official/provisional key where available; audit cancellations/disputes,Do not silently select disputed option,HARD GATE
+QG-07,Similarity control,No direct paraphrase/near-duplicate of a PYQ or training question,Use content fingerprint + semantic similarity review,HARD GATE
+QG-08,Post-2026 mock cutoff,Mock/current question evidence must be published >= 2026-05-25,Historical PYQ remains structural baseline only,HARD GATE
+QG-09,Gated content,"Where public provider page exposes only catalog, record architecture only",Never infer unseen questions,HARD GATE
+QG-10,Bilingual equivalence,New mock question Hindi/English meaning must be equivalent,No option/statement leakage via translation,HARD GATE
+QG-11,Format audit,100 GS questions; 200 marks; 2 hours; four alternatives for standard full test,Verify against UPSC baseline before release,HARD GATE
+QG-12,Current-affairs linkage,Store Primary Subject and CA Linkage separately,Prevent CA-only bucket inflation,HARD GATE

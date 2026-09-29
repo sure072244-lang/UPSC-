@@ -1,0 +1,163 @@
+id,feature,state,category
+1,Global navigation,implemented,AI Command Center
+2,Persistent active view,implemented,AI Command Center
+3,Fullscreen mode,implemented,AI Command Center
+4,Responsive sidebar,implemented,AI Command Center
+5,Offline/PWA shell,implemented,AI Command Center
+6,Data reload,implemented,Data / Backup
+7,Global search,implemented,AI Command Center
+8,1300 PYQ master,implemented,PYQ / Research
+9,Year filter,implemented,AI Command Center
+10,Subject filter,implemented,AI Command Center
+11,Topic search,implemented,AI Command Center
+12,Source-status filter,implemented,AI Command Center
+13,Format filter,implemented,AI Command Center
+14,CA-link filter,implemented,AI Command Center
+15,Negative-stem filter,implemented,AI Command Center
+16,News-cue filter,implemented,AI Command Center
+17,Page-size selector,implemented,AI Command Center
+18,Pagination,implemented,AI Command Center
+19,Column sorting,implemented,AI Command Center
+20,Filtered CSV export,implemented,Data / Backup
+21,Record JSON export,implemented,Data / Backup
+22,Question detail modal,implemented,PYQ / Research
+23,Question deep link,implemented,PYQ / Research
+24,Year drilldown,implemented,AI Command Center
+25,Subject drilldown,implemented,AI Command Center
+26,Pattern drilldown,implemented,AI Command Center
+27,Trend heatmap,implemented,Analytics
+28,Subject bars,implemented,AI Command Center
+29,Format bars,implemented,AI Command Center
+30,Statement-load analysis,implemented,AI Command Center
+31,Negative-stem trend,implemented,Analytics
+32,CA/news trend,implemented,Analytics
+33,Stem-length trend,implemented,Analytics
+34,2026 style dashboard,implemented,AI Command Center
+35,Post-2026 mock catalog,implemented,Mock Test
+36,Provider filter,implemented,AI Command Center
+37,Mock architecture view,implemented,Mock Test
+38,Mock source-link open,implemented,Mock Test
+39,Public quiz stream,implemented,UI / Navigation
+40,Quiz source-link open,implemented,UI / Navigation
+41,Research source registry,implemented,AI Command Center
+42,Research category filter,implemented,AI Command Center
+43,Research date/cutoff display,implemented,AI Command Center
+44,Source URL open,implemented,AI Command Center
+45,Source archive download,implemented,AI Command Center
+46,Findings synthesis,implemented,AI Command Center
+47,QA gate dashboard,implemented,AI Command Center
+48,Answer conflict viewer,implemented,AI Command Center
+49,QA flag drilldown,implemented,AI Command Center
+50,Source-year gate checker,implemented,AI Command Center
+51,Data-quality flag viewer,implemented,Data / Backup
+52,Blueprint lifecycle viewer,implemented,AI Command Center
+53,Canonical-field viewer,implemented,AI Command Center
+54,Mock-generation hard lock,implemented,Mock Test
+55,Manual attempt logger,implemented,AI Command Center
+56,Attempt history,implemented,AI Command Center
+57,Score calculator,implemented,AI Command Center
+58,Accuracy calculator,implemented,AI Command Center
+59,Time-per-question,implemented,PYQ / Research
+60,Confidence logging,implemented,AI Command Center
+61,Error DNA logger,implemented,AI Command Center
+62,Error aggregation,implemented,AI Command Center
+63,Revision queue,implemented,AI Command Center
+64,Revision completion toggle,implemented,AI Command Center
+65,Spaced-revision due view,implemented,AI Command Center
+66,Report snapshot,implemented,AI Command Center
+67,Research audit summary,implemented,AI Command Center
+68,Feature audit,implemented,AI Command Center
+69,Archive manifest,implemented,AI Command Center
+70,Download all research package,implemented,AI Command Center
+71,Workbook download,implemented,AI Command Center
+72,Local backup export,implemented,Data / Backup
+73,Local backup import,implemented,Data / Backup
+74,Keyboard command palette,implemented,AI Command Center
+75,Toast notifications,implemented,AI Command Center
+76,Connection status,implemented,AI Command Center
+77,Last-updated timestamp,implemented,AI Command Center
+78,Data-integrity counts,implemented,Data / Backup
+79,Source-of-record warning,implemented,AI Command Center
+80,Bilingual-ready data model,implemented,Data / Backup
+81,Similarity fingerprint field,implemented,AI Command Center
+82,Coaching vs PYQ layer separation,implemented,PYQ / Research
+83,Historical vs current evidence separation,implemented,AI Command Center
+84,Official-paper external links,implemented,AI Command Center
+85,Internal drilldown pages,implemented,AI Command Center
+86,Click-through metric cards,implemented,AI Command Center
+87,Chart click-through,implemented,AI Command Center
+88,Saved user preferences,implemented,AI Command Center
+89,Mobile table horizontal scroll,implemented,AI Command Center
+90,Accessible button labels/title,implemented,AI Command Center
+91,Study Tracker,implemented,Study Tracker
+92,Automatic study-time logging,implemented,Study Tracker
+93,14-day activity trend,implemented,Analytics
+94,Persistent recent-activity journal,implemented,AI Command Center
+95,Global cross-panel test timer,implemented,Study Tracker
+96,Global countdown status badge,implemented,AI Command Center
+97,Render error recovery boundary,implemented,AI Command Center
+98,Data-load retry recovery,implemented,Data / Backup
+99,Versioned service-worker cache refresh,implemented,AI Command Center
+100,Safe localStorage parsing,implemented,AI Command Center
+101,Deploy-root normalized package,implemented,AI Command Center
+102,Orbitless constellation mode,implemented,AI Command Center
+103,2D tracking graph in 3D lab,implemented,AI Command Center
+104,Study activity export,implemented,Study Tracker
+105,Study activity reset control,implemented,Study Tracker
+106,Human-nav activity logging,implemented,AI Command Center
+107,Interaction activity logging,implemented,AI Command Center
+108,Reduced-motion support,implemented,AI Command Center
+109,Persistent timer recovery banner,implemented,Study Tracker
+110,Offline state telemetry,implemented,AI Command Center
+111,Runtime readiness marker,implemented,AI Command Center
+112,Study Timer • all Prelims + Mains subject catalogue,implemented,Study Tracker
+113,Per-subject cumulative time ledger,implemented,AI Command Center
+114,Automatic timer autosave,implemented,Study Tracker
+115,365-day persistence envelope,implemented,AI Command Center
+116,IndexedDB persistence fallback,implemented,AI Command Center
+117,Navigation pause / return resume,implemented,AI Command Center
+118,Tab visibility pause / return resume,implemented,AI Command Center
+119,Daily study goal,implemented,Study Tracker
+120,Study streak calculation,implemented,Study Tracker
+121,14-day 2D study trend graph,implemented,Study Tracker
+122,Subject colour legend,implemented,AI Command Center
+123,Subject total bars,implemented,AI Command Center
+124,Recent activity journal,implemented,AI Command Center
+125,Study backup export,implemented,Study Tracker
+126,Dashboard global study timer,implemented,Study Tracker
+127,Focus mode state,implemented,AI Command Center
+128,Session notes,implemented,AI Command Center
+129,Session history retention,implemented,AI Command Center
+130,Automatic OMR clear-mark promotion to key draft,implemented,OMR / Evaluation
+131,Paper-code bound answer key finalization,implemented,OMR / Evaluation
+132,Center-disk bubble detection,implemented,AI Command Center
+133,Confidence margin detection,implemented,AI Command Center
+134,Multiple-mark ambiguity detection,implemented,UI / Navigation
+135,Manual ambiguity correction grid,implemented,UI / Navigation
+136,Clear ambiguous answers,implemented,AI Command Center
+137,OMR audit JSON export,implemented,OMR / Evaluation
+138,Reviewed-answer CSV export,implemented,Data / Backup
+139,Key vault draft preview,implemented,AI Command Center
+140,Saved key vault view,implemented,AI Command Center
+141,Saved key vault export,implemented,Data / Backup
+142,Final evaluation gate at 100/100,implemented,OMR / Evaluation
+143,Result snapshot preservation,implemented,AI Command Center
+144,Full 2014–2025 question and option display,implemented,PYQ / Research
+145,2026 official-source fallback link,implemented,AI Command Center
+146,Year / subject / theme / topic filtering,implemented,AI Command Center
+147,Format / status / current-affairs / negative filters,implemented,AI Command Center
+148,Keyword search across question metadata,implemented,PYQ / Research
+149,Filtered CSV export,implemented,Data / Backup
+150,Filtered JSON export,implemented,Data / Backup
+151,Gemini 3.8 Flash configuration,implemented,AI Command Center
+152,Google Search grounding,implemented,AI Command Center
+153,Deep local retrieval,implemented,AI Command Center
+154,Persistent AI history,implemented,AI Command Center
+155,Capability catalogue synced to prompt,implemented,AI Command Center
+156,Safe UI navigation actions,implemented,UI / Navigation
+157,AI dashboard rename / note actions,implemented,AI Command Center
+158,AI module creation,implemented,AI Command Center
+159,AI panel visibility control,implemented,AI Command Center
+160,AI command error recovery,implemented,AI Command Center
+161,Platform passkey device lock,implemented,AI Command Center
+162,Automatic lock after refresh,implemented,AI Command Center

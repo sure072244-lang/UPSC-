@@ -1,0 +1,11 @@
+.git
+.github
+.emergent
+**/.env
+**/.env.*
+**/__pycache__
+**/*.py[cod]
+**/node_modules
+frontend/dist
+tests/node_modules
+*.log

@@ -1,0 +1,43 @@
+{
+  "build": "PRECISION_TRAINING_STATE_v2",
+  "created_utc": "2026-09-24",
+  "pyq_scope": {
+    "years": "2017-2026",
+    "nominal_questions": 1000,
+    "question_text_full_years": "2017-2025",
+    "question_text_2026": "public title/topic inventory; official scan remains source-of-record"
+  },
+  "source_rule": {
+    "pyq_year": "Y",
+    "primary_source_date_max": "Y",
+    "later_sources": "retrospective_only",
+    "setter_attribution": "not disclosed by UPSC"
+  },
+  "post_2026_mock_cutoff": "2026-05-25",
+  "mock_generation_enabled": false,
+  "source_verification_policy": "No guessed primary-source attribution; unresolved records remain UNVERIFIED.",
+  "web_sources_used": [
+    "UPSC official archive",
+    "VisionIAS 2026",
+    "UnlockIAS 2026",
+    "Legacy IAS 2026",
+    "Anantam IAS 2026",
+    "Ease My Prep 2026",
+    "VisionIAS 2025",
+    "UPSCprep 2024",
+    "UPSCprep 2023",
+    "SuperKalam 2017-2019",
+    "Post-2026 2027 test-series catalogs from PMF/Testbook/ForumIAS/InsightsIAS/ClearIAS/Drishti and Indian Express quizzes"
+  ],
+  "qa_gates": 12,
+  "files": [
+    "CURRENT_QUIZ_STREAM_POST_2026.csv",
+    "POST_2026_MOCK_ECOSYSTEM_v2.csv",
+    "PYQ_SOURCE_TRACKING_2017_2026_DESCRIPTIVE_v2.csv",
+    "QA_GATES_v2.csv",
+    "SOURCE_REGISTRY_POST_2026_v2.csv",
+    "TRAINING_STATE_REPORT_v2.md",
+    "TRAINING_STATE_v2.json",
+    "YEAR_ANALYSIS_2017_2026_v2.csv"
+  ]
+}

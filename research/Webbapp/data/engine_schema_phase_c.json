@@ -1,0 +1,14 @@
+{
+  "test_registry": "50 immutable test slots",
+  "paper_code": "unique per test",
+  "access_window": "09:30-11:30 local",
+  "countdown_seconds": 120,
+  "duration_seconds": 7200,
+  "rounds": [
+    "round_1",
+    "round_2"
+  ],
+  "autosave": "localStorage + recovery",
+  "offline": "no network required after assets cached",
+  "question_generation": "separate release gate; no mock questions generated in Phase C/D"
+}

@@ -1,0 +1,34 @@
+provider,stage,subject_or_cluster,tests
+PMF IAS 2026,Sectional,Ancient,2
+PMF IAS 2026,Sectional,Medieval,1
+PMF IAS 2026,Sectional,Modern,3
+PMF IAS 2026,Sectional,Art & Culture,1
+PMF IAS 2026,Sectional,Polity,4
+PMF IAS 2026,Sectional,Geography,3
+PMF IAS 2026,Sectional,Environment,2
+PMF IAS 2026,Sectional,Economy,3
+PMF IAS 2026,Sectional,Static full,1
+PMF IAS 2026,Advanced,Polity,1
+PMF IAS 2026,Advanced,Ancient+Medieval,1
+PMF IAS 2026,Advanced,Economy,1
+PMF IAS 2026,Advanced,Modern,1
+PMF IAS 2026,Advanced,Agriculture,1
+PMF IAS 2026,Advanced,Geography,1
+PMF IAS 2026,Advanced,Environment,1
+PMF IAS 2026,Advanced,S&T,1
+ForumIAS 2027,L1 GS,Polity,4
+ForumIAS 2027,L1 GS,Economy,4
+ForumIAS 2027,L1 GS,Modern History,3
+ForumIAS 2027,L1 GS,Geography,3
+ForumIAS 2027,L1 GS,Environment,3
+ForumIAS 2027,L1 GS,Art & Culture,2
+ForumIAS 2027,L1 GS,Ancient,1
+ForumIAS 2027,L1 GS,Medieval,1
+ForumIAS 2027,L1 GS,General Science,1
+ForumIAS 2027,L1 GS,Agriculture+S&T,1
+ForumIAS 2027,L2 GS,Polity,1
+ForumIAS 2027,L2 GS,Economy,1
+ForumIAS 2027,L2 GS,History,1
+ForumIAS 2027,L2 GS,Geography+Environment,1
+ForumIAS 2027,L2 GS,Art+Culture+S&T+Agriculture,1
+ForumIAS 2027,L2 GS,Economic Survey+Budget+IR,1

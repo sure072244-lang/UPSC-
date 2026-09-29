@@ -1,0 +1,4 @@
+Pass 3 package QA is executed after ZIP creation:
+1. unzip -t archive
+2. extract archive and rerun static QA
+3. compare file count, PYQ count, feature count, 50-test count, scoring rule and required deployment/runtime assets

@@ -1,0 +1,21 @@
+{
+  "version": "v4",
+  "mode": "personal-use",
+  "features": [
+    "Weak Areas dashboard replacing latest-public-signal emphasis",
+    "Organised Data Vault with human-readable file grouping",
+    "AI Command Center with local command engine",
+    "Optional browser-side BYOK AI connector",
+    "Local-only Admin Edit Mode with PIN",
+    "In-page dashboard title/note editing",
+    "Persistent UI overrides via localStorage",
+    "Improved button/event binding",
+    "Service-worker cache version bump to v4"
+  ],
+  "safety": [
+    "Mock generation remains locked",
+    "No server-side secret storage exists in this static build",
+    "BYOK API keys are stored only in browser localStorage if user explicitly saves them",
+    "AI actions are limited to structured UI changes"
+  ]
+}

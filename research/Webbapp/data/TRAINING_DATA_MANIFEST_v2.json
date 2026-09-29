@@ -1,0 +1,18 @@
+{
+  "build": "PRECISION UPSC CSE Prelims 2027 Training Data v2",
+  "scope": "2017-2026 PYQ descriptive source-tracking + post-2026 public mock/quiz intelligence",
+  "pyq_records": 1000,
+  "post_2026_mock_cutoff": "2026-05-25",
+  "mock_generation": false,
+  "source_rule": "Primary source publication date <= PYQ year; later sources are retrospective only",
+  "setter_attribution": "Not disclosed by UPSC",
+  "quality_policy": "Do not infer gated content; do not guess setter source; unresolved primary provenance remains UNVERIFIED",
+  "files": [
+    "pyq_1000_descriptive_source_tracking_v2.csv",
+    "post_2026_mock_ecosystem_v2.csv",
+    "current_quiz_stream_post_2026.csv",
+    "year_analysis_2017_2026_v2.csv",
+    "qa_summary_v2.json",
+    "training_state_v2.json"
+  ]
+}

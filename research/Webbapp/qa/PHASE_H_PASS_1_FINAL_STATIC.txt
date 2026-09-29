@@ -1,0 +1,50 @@
+PHASE H STATIC QA: PASS
+PASS required:index.html 
+PASS required:app.js 
+PASS required:styles.css 
+PASS required:sw.js 
+PASS required:manifest.webmanifest 
+PASS required:vercel.json 
+PASS required:PHASE_H_README.md 
+PASS required:PHASE_H_QA_REPORT.md 
+PASS required:data/feature_registry_v4.csv 
+PASS required:data/core/pyq_master_integrated_2014_2026.csv 
+PASS required:data/test_registry_01_50.json 
+PASS required:omr_template_page_1.svg 
+PASS required:omr_template_page_2.svg 
+PASS node-syntax 
+PASS feature-count>=70 90
+PASS feature-id-unique 
+PASS feature-active 
+PASS single-protected-lock 
+PASS pyq-count-1300 1300
+PASS pyq-id-unique 
+PASS pyq-years-2014-2026 [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+PASS test-count-50 50
+PASS test-nos-1-50 
+PASS test-q-count 
+PASS test-marks 
+PASS test-duration 
+PASS test-window 
+PASS paper-code-unique 
+PASS negative-marking 
+PASS wrong-ui-penalty 
+PASS water-ripple 
+PASS human-3d-nav 
+PASS mobile-nav 
+PASS offline-state 
+PASS fullscreen 
+PASS timer-recovery 
+PASS evaluation-recovery 
+PASS countdown-updates 
+PASS gemini-default 
+PASS gemini-stream 
+PASS gemini-grounding 
+PASS ai-controlled-actions 
+PASS ai-no-arbitrary-js 
+PASS sw-h-version 
+PASS sw-assets-all-exist []
+PASS navigation-view-coverage []
+PASS navigation-count>=20 20
+PASS static-id-unique []
+PASS no-google-api-key-literal 

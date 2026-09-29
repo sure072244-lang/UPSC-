@@ -1,0 +1,112 @@
+id,feature,layer,state
+01,Global navigation,Core UI,ACTIVE
+02,Persistent active view,Core UI,ACTIVE
+03,Fullscreen mode,Core UI,ACTIVE
+04,Responsive sidebar,Core UI,ACTIVE
+05,Offline/PWA shell,Core UI,ACTIVE
+06,Data reload,Core UI,ACTIVE
+07,Global search,Explorer,ACTIVE
+08,1300 PYQ master,PYQ,ACTIVE
+09,Year filter,PYQ,ACTIVE
+10,Subject filter,PYQ,ACTIVE
+11,Topic search,PYQ,ACTIVE
+12,Source-status filter,PYQ,ACTIVE
+13,Format filter,PYQ,ACTIVE
+14,CA-link filter,PYQ,ACTIVE
+15,Negative-stem filter,PYQ,ACTIVE
+16,News-cue filter,PYQ,ACTIVE
+17,Page-size selector,PYQ,ACTIVE
+18,Pagination,PYQ,ACTIVE
+19,Column sorting,PYQ,ACTIVE
+20,Filtered CSV export,PYQ,ACTIVE
+21,Record JSON export,PYQ,ACTIVE
+22,Question detail modal,PYQ,ACTIVE
+23,Question deep link,PYQ,ACTIVE
+24,Year drilldown,Analytics,ACTIVE
+25,Subject drilldown,Analytics,ACTIVE
+26,Pattern drilldown,Analytics,ACTIVE
+27,Trend heatmap,Analytics,ACTIVE
+28,Subject bars,Analytics,ACTIVE
+29,Format bars,Analytics,ACTIVE
+30,Statement-load analysis,Analytics,ACTIVE
+31,Negative-stem trend,Analytics,ACTIVE
+32,CA/news trend,Analytics,ACTIVE
+33,Stem-length trend,Analytics,ACTIVE
+34,2026 style dashboard,Analytics,ACTIVE
+35,Post-2026 mock catalog,Current,ACTIVE
+36,Provider filter,Current,ACTIVE
+37,Mock architecture view,Current,ACTIVE
+38,Mock source-link open,Current,ACTIVE
+39,Public quiz stream,Current,ACTIVE
+40,Quiz source-link open,Current,ACTIVE
+41,Research source registry,Research,ACTIVE
+42,Research category filter,Research,ACTIVE
+43,Research date/cutoff display,Research,ACTIVE
+44,Source URL open,Research,ACTIVE
+45,Source archive download,Research,ACTIVE
+46,Findings synthesis,Research,ACTIVE
+47,QA gate dashboard,QA,ACTIVE
+48,Answer conflict viewer,QA,ACTIVE
+49,QA flag drilldown,QA,ACTIVE
+50,Source-year gate checker,QA,ACTIVE
+51,Data-quality flag viewer,QA,ACTIVE
+52,Blueprint lifecycle viewer,Engine,ACTIVE
+53,Canonical-field viewer,Engine,ACTIVE
+54,Mock-generation hard lock,Engine,LOCKED
+55,Manual attempt logger,Tracking,ACTIVE
+56,Attempt history,Tracking,ACTIVE
+57,Score calculator,Tracking,ACTIVE
+58,Accuracy calculator,Tracking,ACTIVE
+59,Time-per-question,Tracking,ACTIVE
+60,Confidence logging,Tracking,ACTIVE
+61,Error DNA logger,Tracking,ACTIVE
+62,Error aggregation,Tracking,ACTIVE
+63,Revision queue,Learning,ACTIVE
+64,Revision completion toggle,Learning,ACTIVE
+65,Spaced-revision due view,Learning,ACTIVE
+66,Report snapshot,Reports,ACTIVE
+67,Research audit summary,Reports,ACTIVE
+68,Feature audit,System,ACTIVE
+69,Archive manifest,Vault,ACTIVE
+70,Download all research package,Vault,ACTIVE
+71,Workbook download,Vault,ACTIVE
+72,Local backup export,System,ACTIVE
+73,Local backup import,System,ACTIVE
+74,Keyboard command palette,System,ACTIVE
+75,Toast notifications,System,ACTIVE
+76,Connection status,System,ACTIVE
+77,Last-updated timestamp,System,ACTIVE
+78,Data-integrity counts,System,ACTIVE
+79,Source-of-record warning,System,ACTIVE
+80,Bilingual-ready data model,Engine,ACTIVE
+81,Similarity fingerprint field,Engine,ACTIVE
+82,Coaching vs PYQ layer separation,Engine,ACTIVE
+83,Historical vs current evidence separation,Engine,ACTIVE
+84,Official-paper external links,Vault,ACTIVE
+85,Internal drilldown pages,Core UI,ACTIVE
+86,Click-through metric cards,Core UI,ACTIVE
+87,Chart click-through,Analytics,ACTIVE
+88,Saved user preferences,System,ACTIVE
+89,Mobile table horizontal scroll,Core UI,ACTIVE
+90,Accessible button labels/title,Core UI,ACTIVE
+91,Study Tracker,Learning,ACTIVE
+92,Automatic study-time logging,Learning,ACTIVE
+93,14-day activity trend,Analytics,ACTIVE
+94,Persistent recent-activity journal,System,ACTIVE
+95,Global cross-panel test timer,Engine,ACTIVE
+96,Global countdown status badge,Core UI,ACTIVE
+97,Render error recovery boundary,System,ACTIVE
+98,Data-load retry recovery,System,ACTIVE
+99,Versioned service-worker cache refresh,PWA,ACTIVE
+100,Safe localStorage parsing,System,ACTIVE
+101,Deploy-root normalized package,Deployment,ACTIVE
+102,Orbitless constellation mode,3D UX,ACTIVE
+103,2D tracking graph in 3D lab,Analytics,ACTIVE
+104,Study activity export,Learning,ACTIVE
+105,Study activity reset control,Learning,ACTIVE
+106,Human-nav activity logging,Core UI,ACTIVE
+107,Interaction activity logging,System,ACTIVE
+108,Reduced-motion support,Accessibility,ACTIVE
+109,Persistent timer recovery banner,Engine,ACTIVE
+110,Offline state telemetry,PWA,ACTIVE
+111,Runtime readiness marker,System,ACTIVE

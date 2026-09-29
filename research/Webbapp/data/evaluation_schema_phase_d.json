@@ -1,0 +1,25 @@
+{
+  "answer_count": 100,
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "identity": "test_no + paper_code",
+  "input_modes": [
+    "portal_omr_image",
+    "manual_1_100"
+  ],
+  "queue_lock_minutes": 60,
+  "scoring": {
+    "correct": 2,
+    "wrong": -0.6666666666666666,
+    "blank": 0
+  },
+  "result_snapshot": "immutable at queue submission",
+  "answer_key_sync": [
+    "JSON",
+    "CSV"
+  ]
+}

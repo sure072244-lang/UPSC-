@@ -1,0 +1,32 @@
+{
+  "phase": "A \u2014 Data Freeze",
+  "generated_at": "2026-09-24T07:23:34.896859+00:00",
+  "pyq_nominal_questions": 1300,
+  "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "unique_ids": 1300,
+  "unique_subtopics_populated": 174,
+  "answer_conflicts_in_working_corpus": 7,
+  "cancelled_flags_2017_2025": 8,
+  "2016_primary_verified": 8,
+  "2016_primary_candidates": 5,
+  "post_2026_cutoff": "2026-05-25",
+  "mock_generation": "DISABLED IN PHASE A",
+  "2026_text_limit": "Nominal 100-row inventory; detailed question-text/subtopic enrichment remains incomplete in the frozen corpus; official PDF is source-of-record.",
+  "historical_source_rule": "PYQ year Y => primary source publication/document date <= Y. Later material is retrospective corroboration only.",
+  "setter_attribution_rule": "UPSC does not publish setter-source attribution; supporting primary evidence is not proof of setter use.",
+  "15_year_forecast_status": "BLOCKED UNTIL 2011\u20132013 historical corpus is added; current freeze covers 2014\u20132026 (13 years)."
+}

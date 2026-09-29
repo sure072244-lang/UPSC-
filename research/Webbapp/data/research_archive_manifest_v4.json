@@ -1,0 +1,300 @@
+{
+  "generated": "2026-09-24",
+  "count": 49,
+  "files": [
+    {
+      "name": "COACHING_SCHEDULE_ALLOCATION.csv",
+      "path": "archive/research/COACHING_SCHEDULE_ALLOCATION.csv",
+      "type": "analysis",
+      "size_bytes": 1187
+    },
+    {
+      "name": "COACHING_SCHEDULE_ANALYSIS_2026_2027.md",
+      "path": "archive/research/COACHING_SCHEDULE_ANALYSIS_2026_2027.md",
+      "type": "analysis",
+      "size_bytes": 2546
+    },
+    {
+      "name": "CURRENT_QUIZ_STREAM_POST_2026.csv",
+      "path": "archive/research/CURRENT_QUIZ_STREAM_POST_2026.csv",
+      "type": "analysis",
+      "size_bytes": 1061
+    },
+    {
+      "name": "DIFFICULTY_YEAR_2014_2025.csv",
+      "path": "archive/research/DIFFICULTY_YEAR_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 185
+    },
+    {
+      "name": "FORMAT_YEAR_2014_2025.csv",
+      "path": "archive/research/FORMAT_YEAR_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 294
+    },
+    {
+      "name": "PERIOD_SUBJECT_AVERAGES.csv",
+      "path": "archive/research/PERIOD_SUBJECT_AVERAGES.csv",
+      "type": "analysis",
+      "size_bytes": 378
+    },
+    {
+      "name": "POST_2026_MOCK_ECOSYSTEM_v2.csv",
+      "path": "archive/research/POST_2026_MOCK_ECOSYSTEM_v2.csv",
+      "type": "analysis",
+      "size_bytes": 2319
+    },
+    {
+      "name": "POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.csv",
+      "path": "archive/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.csv",
+      "type": "analysis",
+      "size_bytes": 2945
+    },
+    {
+      "name": "POST_2026_PRELIMS_MOCK_INTELLIGENCE_REPORT_v1.md",
+      "path": "archive/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_REPORT_v1.md",
+      "type": "analysis",
+      "size_bytes": 1785
+    },
+    {
+      "name": "PYQ_ANALYSIS_2017_2026_YEAR_SUMMARY_v1.csv",
+      "path": "archive/research/PYQ_ANALYSIS_2017_2026_YEAR_SUMMARY_v1.csv",
+      "type": "analysis",
+      "size_bytes": 254
+    },
+    {
+      "name": "PYQ_ANALYSIS_REPORT_2014_2026.md",
+      "path": "archive/research/PYQ_ANALYSIS_REPORT_2014_2026.md",
+      "type": "analysis",
+      "size_bytes": 17969
+    },
+    {
+      "name": "PYQ_ANSWER_QA_FLAGS_v2.csv",
+      "path": "archive/research/PYQ_ANSWER_QA_FLAGS_v2.csv",
+      "type": "analysis",
+      "size_bytes": 908
+    },
+    {
+      "name": "PYQ_FORMAT_BY_YEAR_2017_2025_v1.csv",
+      "path": "archive/research/PYQ_FORMAT_BY_YEAR_2017_2025_v1.csv",
+      "type": "analysis",
+      "size_bytes": 242
+    },
+    {
+      "name": "PYQ_MASTER_METADATA_2014_2025.csv",
+      "path": "archive/research/PYQ_MASTER_METADATA_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 200757
+    },
+    {
+      "name": "PYQ_QA_FLAGS_2017_2026_v1.csv",
+      "path": "archive/research/PYQ_QA_FLAGS_2017_2026_v1.csv",
+      "type": "analysis",
+      "size_bytes": 3980
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2017_2026_DESCRIPTIVE_v2.csv",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2017_2026_DESCRIPTIVE_v2.csv",
+      "type": "analysis",
+      "size_bytes": 1770254
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2017_2026_MASTER_v1.csv",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2017_2026_MASTER_v1.csv",
+      "type": "analysis",
+      "size_bytes": 519573
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2026_REGISTER.csv",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2026_REGISTER.csv",
+      "type": "analysis",
+      "size_bytes": 23450
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_AUDIT_REPORT_2017_2026.md",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_AUDIT_REPORT_2017_2026.md",
+      "type": "analysis",
+      "size_bytes": 2951
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_MASTER_2017_2025.csv",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_MASTER_2017_2025.csv",
+      "type": "analysis",
+      "size_bytes": 278660
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_REPORT_2017_2026_v1.md",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_REPORT_2017_2026_v1.md",
+      "type": "analysis",
+      "size_bytes": 4554
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_RESEARCH_LOG_2017_2026_v2.md",
+      "path": "archive/research/PYQ_SOURCE_TRACKING_RESEARCH_LOG_2017_2026_v2.md",
+      "type": "analysis",
+      "size_bytes": 2177
+    },
+    {
+      "name": "PYQ_SUBJECT_BY_YEAR_2017_2025_v1.csv",
+      "path": "archive/research/PYQ_SUBJECT_BY_YEAR_2017_2025_v1.csv",
+      "type": "analysis",
+      "size_bytes": 429
+    },
+    {
+      "name": "PYQ_SUBJECT_YEAR_SUMMARY_2017_2025.csv",
+      "path": "archive/research/PYQ_SUBJECT_YEAR_SUMMARY_2017_2025.csv",
+      "type": "analysis",
+      "size_bytes": 1785
+    },
+    {
+      "name": "PYQ_YEAR_QA_SUMMARY_2017_2025.csv",
+      "path": "archive/research/PYQ_YEAR_QA_SUMMARY_2017_2025.csv",
+      "type": "analysis",
+      "size_bytes": 423
+    },
+    {
+      "name": "QA_FLAGGED_QUESTIONS.csv",
+      "path": "archive/research/QA_FLAGGED_QUESTIONS.csv",
+      "type": "analysis",
+      "size_bytes": 3982
+    },
+    {
+      "name": "QA_GATES_v2.csv",
+      "path": "archive/research/QA_GATES_v2.csv",
+      "type": "analysis",
+      "size_bytes": 1808
+    },
+    {
+      "name": "QA_SUMMARY_v2.json",
+      "path": "archive/research/QA_SUMMARY_v2.json",
+      "type": "analysis",
+      "size_bytes": 444
+    },
+    {
+      "name": "SOURCE_REGISTRY_POST_2026_v2.csv",
+      "path": "archive/research/SOURCE_REGISTRY_POST_2026_v2.csv",
+      "type": "analysis",
+      "size_bytes": 4628
+    },
+    {
+      "name": "SOURCE_VERIFICATION_STATUS_RULES_v2.csv",
+      "path": "archive/research/SOURCE_VERIFICATION_STATUS_RULES_v2.csv",
+      "type": "analysis",
+      "size_bytes": 508
+    },
+    {
+      "name": "STATEMENT_LOAD_YEAR_2014_2025.csv",
+      "path": "archive/research/STATEMENT_LOAD_YEAR_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 262
+    },
+    {
+      "name": "SUBJECT_YEAR_2014_2025.csv",
+      "path": "archive/research/SUBJECT_YEAR_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 521
+    },
+    {
+      "name": "TOPIC_FREQUENCY_TOP100_2014_2025.csv",
+      "path": "archive/research/TOPIC_FREQUENCY_TOP100_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 4251
+    },
+    {
+      "name": "TRAINING_STATE_REPORT_v2.md",
+      "path": "archive/research/TRAINING_STATE_REPORT_v2.md",
+      "type": "analysis",
+      "size_bytes": 5426
+    },
+    {
+      "name": "TRAINING_STATE_v2.json",
+      "path": "archive/research/TRAINING_STATE_v2.json",
+      "type": "analysis",
+      "size_bytes": 1387
+    },
+    {
+      "name": "WEB_RESEARCH_SOURCE_REGISTRY_2017_2026_v2.csv",
+      "path": "archive/research/WEB_RESEARCH_SOURCE_REGISTRY_2017_2026_v2.csv",
+      "type": "analysis",
+      "size_bytes": 4056
+    },
+    {
+      "name": "YEAR_ANALYSIS_2017_2026_v2.csv",
+      "path": "archive/research/YEAR_ANALYSIS_2017_2026_v2.csv",
+      "type": "analysis",
+      "size_bytes": 1064
+    },
+    {
+      "name": "difficulty_year_2014_2025.csv",
+      "path": "archive/research/difficulty_year_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 185
+    },
+    {
+      "name": "format_year_2014_2025.csv",
+      "path": "archive/research/format_year_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 294
+    },
+    {
+      "name": "period_subject_averages.csv",
+      "path": "archive/research/period_subject_averages.csv",
+      "type": "analysis",
+      "size_bytes": 378
+    },
+    {
+      "name": "statement_count_year_2014_2025.csv",
+      "path": "archive/research/statement_count_year_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 262
+    },
+    {
+      "name": "subject_year_2014_2025.csv",
+      "path": "archive/research/subject_year_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 521
+    },
+    {
+      "name": "topic_frequency_top100_2014_2025.csv",
+      "path": "archive/research/topic_frequency_top100_2014_2025.csv",
+      "type": "analysis",
+      "size_bytes": 4251
+    },
+    {
+      "name": "COACHING_MOCK_ANALYSIS_2026_2027_OVERVIEW_v1.md",
+      "path": "archive/source_packages/COACHING_MOCK_ANALYSIS_2026_2027_OVERVIEW_v1.md",
+      "type": "analysis",
+      "size_bytes": 11374
+    },
+    {
+      "name": "POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.zip",
+      "path": "archive/source_packages/POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.zip",
+      "type": "package",
+      "size_bytes": 2782
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2016_COMPLETE_YEAR_v1.csv",
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2016_COMPLETE_YEAR_v1.csv",
+      "type": "analysis",
+      "size_bytes": 28044
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2016_TRANCHE_v0_3.csv",
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2016_TRANCHE_v0_3.csv",
+      "type": "analysis",
+      "size_bytes": 5056
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2017_2026_COMPLETE_v1.zip",
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2017_2026_COMPLETE_v1.zip",
+      "type": "package",
+      "size_bytes": 39344
+    },
+    {
+      "name": "PYQ_SOURCE_TRACKING_2017_2026_RESEARCH_v2.zip",
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2017_2026_RESEARCH_v2.zip",
+      "type": "package",
+      "size_bytes": 42221
+    }
+  ]
+}

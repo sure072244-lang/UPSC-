@@ -1,0 +1,681 @@
+{
+  "schema_version": "PHASE_B_1.0",
+  "phase": "B — Portal data integration",
+  "scope": "UPSC CSE Prelims 2027 GS-I personal-use training/research portal",
+  "pyq_nominal_records": 1300,
+  "pyq_years": "2014–2026",
+  "mock_generation_enabled": false,
+  "source_of_record": "Phase A frozen datasets; official UPSC paper remains source-of-record",
+  "search": "Browser search index + bundled SQLite source database",
+  "datasets": [
+    {
+      "path": "README.md",
+      "size_bytes": 940,
+      "sha256": "914d8d4c46f32cc658829778153b0767f6326b22c3a7d5c6e693160346efc4cf"
+    },
+    {
+      "path": "app.js",
+      "size_bytes": 32005,
+      "sha256": "1f9a03e014485d703cfa6d83b148ea740c42d817c35ef1a3026b6557edc6cdae"
+    },
+    {
+      "path": "archive/research/COACHING_SCHEDULE_ALLOCATION.csv",
+      "size_bytes": 1187,
+      "sha256": "d34710076edc848af3b8016d6870ab3bf4899073829a6cabaf9a75e482147d3a"
+    },
+    {
+      "path": "archive/research/COACHING_SCHEDULE_ANALYSIS_2026_2027.md",
+      "size_bytes": 2546,
+      "sha256": "0683966c9b40ea05574e6c4aaa32c9fdf988286d42c63cb2c32b65c78ed2a369"
+    },
+    {
+      "path": "archive/research/CURRENT_QUIZ_STREAM_POST_2026.csv",
+      "size_bytes": 1061,
+      "sha256": "9515e92552aa7dda58735ef1bdfdb41856a0f5f5c50779afdc5a9f1143051f53"
+    },
+    {
+      "path": "archive/research/DIFFICULTY_YEAR_2014_2025.csv",
+      "size_bytes": 185,
+      "sha256": "5219a9a29ad4c6a25ade824d97d7c24ea37bef8c0d0edb1bd6fb2eaeeaf0bae1"
+    },
+    {
+      "path": "archive/research/FORMAT_YEAR_2014_2025.csv",
+      "size_bytes": 294,
+      "sha256": "5839b21d1cc2e542e4b085861b8d0e3dc16d964712b7ef83320556b49eac473b"
+    },
+    {
+      "path": "archive/research/PERIOD_SUBJECT_AVERAGES.csv",
+      "size_bytes": 378,
+      "sha256": "ac5858b4d9ed6cc6d1a151cf8ea2c1d19d2b28284cc25d9d87941741ce32b08d"
+    },
+    {
+      "path": "archive/research/POST_2026_MOCK_ECOSYSTEM_v2.csv",
+      "size_bytes": 2319,
+      "sha256": "4fcadce3d333a8f0f8a231cefc86ccde68aeca4ac64e39c7c0a70c543213865d"
+    },
+    {
+      "path": "archive/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.csv",
+      "size_bytes": 2945,
+      "sha256": "ffc0f7b5c68236a42e9cc42573854c98b8ca6331a1a213d86bef072389e8041a"
+    },
+    {
+      "path": "archive/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_REPORT_v1.md",
+      "size_bytes": 1785,
+      "sha256": "121830732d95f2677cd2e6108c514dbbd2785301ba366bb903efa1a04d54c302"
+    },
+    {
+      "path": "archive/research/PYQ_ANALYSIS_2017_2026_YEAR_SUMMARY_v1.csv",
+      "size_bytes": 254,
+      "sha256": "ff8f1adacf49c02bb7a039f35b765e5a60b526b404679a7fae51a06b2b912e5b"
+    },
+    {
+      "path": "archive/research/PYQ_ANALYSIS_REPORT_2014_2026.md",
+      "size_bytes": 17969,
+      "sha256": "33eab94ec4f18f769fb45eb521216d0c51e59091340683d6988c73114a9c837a"
+    },
+    {
+      "path": "archive/research/PYQ_ANSWER_QA_FLAGS_v2.csv",
+      "size_bytes": 908,
+      "sha256": "8be730019c57dd74719a764de7fe99096b66e9b488b2aa3b055e962436262b95"
+    },
+    {
+      "path": "archive/research/PYQ_FORMAT_BY_YEAR_2017_2025_v1.csv",
+      "size_bytes": 242,
+      "sha256": "9b8b06095c156cc7a88347beee1a0665fdf20e7fb903fe2dbb26ea4a4d8f2492"
+    },
+    {
+      "path": "archive/research/PYQ_MASTER_METADATA_2014_2025.csv",
+      "size_bytes": 200757,
+      "sha256": "e0fc10c1fa1bfc63bbb778440197148bf8a36171a26a8d24a3abe7d2d275503c"
+    },
+    {
+      "path": "archive/research/PYQ_QA_FLAGS_2017_2026_v1.csv",
+      "size_bytes": 3980,
+      "sha256": "5f29974c6ac7b259060fd88b847285b304341b585f8da5643618c469aad82dfe"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2017_2026_DESCRIPTIVE_v2.csv",
+      "size_bytes": 1770254,
+      "sha256": "bf2402b83cc9c827c280eacdd2545ac98b4f5ae116f65ec6720d2680cb7154c8"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2017_2026_MASTER_v1.csv",
+      "size_bytes": 519573,
+      "sha256": "e3aecfb7a8bb944a7c580c6556c70bdd5c461ddd99f65ef30e9978186d01c12c"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_2026_REGISTER.csv",
+      "size_bytes": 23450,
+      "sha256": "9a3cb38dead58f734fa8cac0d187d8211c11023640aa76f717c1f88686bec361"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_AUDIT_REPORT_2017_2026.md",
+      "size_bytes": 2951,
+      "sha256": "a8a1e596386f3b2f08b260534cfac5441187fa5846d5337666d1352a74ba294a"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_MASTER_2017_2025.csv",
+      "size_bytes": 278660,
+      "sha256": "0d2509b8beefe98f74e44590e1977304cf10e02b12f603246963e4126245ad88"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_REPORT_2017_2026_v1.md",
+      "size_bytes": 4554,
+      "sha256": "712da1dcdfade537409066d035df7d4f004306c8064d9dc063515d34f30311fc"
+    },
+    {
+      "path": "archive/research/PYQ_SOURCE_TRACKING_RESEARCH_LOG_2017_2026_v2.md",
+      "size_bytes": 2177,
+      "sha256": "57012e020ab47a96e0b6bbf2ea3abe2f359c872e5fecedc1f6c52032c92aee07"
+    },
+    {
+      "path": "archive/research/PYQ_SUBJECT_BY_YEAR_2017_2025_v1.csv",
+      "size_bytes": 429,
+      "sha256": "103c3eaf80741e6875b5c8a7c1af8c248ed2c9dbd06e303c5ccaf137db43f18b"
+    },
+    {
+      "path": "archive/research/PYQ_SUBJECT_YEAR_SUMMARY_2017_2025.csv",
+      "size_bytes": 1785,
+      "sha256": "998bbb268051709fccc766b0571e6f8ddab70ad0b52d275a0f3d936e3489f836"
+    },
+    {
+      "path": "archive/research/PYQ_YEAR_QA_SUMMARY_2017_2025.csv",
+      "size_bytes": 423,
+      "sha256": "83bbe205036046e416d815b7a58d7f715d2931f9d177e433a0a1b102d6e2bd79"
+    },
+    {
+      "path": "archive/research/QA_FLAGGED_QUESTIONS.csv",
+      "size_bytes": 3982,
+      "sha256": "62eb4f22c62f9e698b790595e5be098cb3f6e4f98bd81ffc10aee354ca5b41b9"
+    },
+    {
+      "path": "archive/research/QA_GATES_v2.csv",
+      "size_bytes": 1808,
+      "sha256": "f3ab435c0dab14bd7ac07fa28a3a40d741cb53b6d11d20585f795a3313b1300a"
+    },
+    {
+      "path": "archive/research/QA_SUMMARY_v2.json",
+      "size_bytes": 444,
+      "sha256": "42eccc08981f9c734d9c0e41b33424a9b4dba421083747e61891addc2ad66043"
+    },
+    {
+      "path": "archive/research/SOURCE_REGISTRY_POST_2026_v2.csv",
+      "size_bytes": 4628,
+      "sha256": "c4c6ce3d7264ac374775932053e7ac8bac160c84b55336e6bdbcb52bf9df02b1"
+    },
+    {
+      "path": "archive/research/SOURCE_VERIFICATION_STATUS_RULES_v2.csv",
+      "size_bytes": 508,
+      "sha256": "35c904961d0b1dbb186c39ab0118e5c289647578c8a05e270937e9d20565db8e"
+    },
+    {
+      "path": "archive/research/STATEMENT_LOAD_YEAR_2014_2025.csv",
+      "size_bytes": 262,
+      "sha256": "6abb29af3a62bba1f108c738ae213f1516ed86c5c10ed1563f4655cd3667a9fa"
+    },
+    {
+      "path": "archive/research/SUBJECT_YEAR_2014_2025.csv",
+      "size_bytes": 521,
+      "sha256": "538ea920b0983de0645199b378115f50f02499d32c23319050fbec711db83e71"
+    },
+    {
+      "path": "archive/research/TOPIC_FREQUENCY_TOP100_2014_2025.csv",
+      "size_bytes": 4251,
+      "sha256": "80b8eaaab5f647823aff549fc6c529e05fee1adb9b757e49677628d69b8d0ea1"
+    },
+    {
+      "path": "archive/research/TRAINING_STATE_REPORT_v2.md",
+      "size_bytes": 5426,
+      "sha256": "ccb50a317bcd3a78b90aa91055da25f24841dcd8517f749672292c595f09593b"
+    },
+    {
+      "path": "archive/research/TRAINING_STATE_v2.json",
+      "size_bytes": 1387,
+      "sha256": "5a23ccbb0dc88077b4c4abee9dd11cac67cb4840ccc7f8f0534e8a448eb19000"
+    },
+    {
+      "path": "archive/research/WEB_RESEARCH_SOURCE_REGISTRY_2017_2026_v2.csv",
+      "size_bytes": 4056,
+      "sha256": "df00c9b1b49e2a29c434a16584ba1617c1ea39e9b9c8477cda408b1f76bda602"
+    },
+    {
+      "path": "archive/research/YEAR_ANALYSIS_2017_2026_v2.csv",
+      "size_bytes": 1064,
+      "sha256": "b92eb8385635126458edaa9b50d301b94040e6530d5d0459364618a110cda670"
+    },
+    {
+      "path": "archive/research/difficulty_year_2014_2025.csv",
+      "size_bytes": 185,
+      "sha256": "5219a9a29ad4c6a25ade824d97d7c24ea37bef8c0d0edb1bd6fb2eaeeaf0bae1"
+    },
+    {
+      "path": "archive/research/format_year_2014_2025.csv",
+      "size_bytes": 294,
+      "sha256": "5839b21d1cc2e542e4b085861b8d0e3dc16d964712b7ef83320556b49eac473b"
+    },
+    {
+      "path": "archive/research/period_subject_averages.csv",
+      "size_bytes": 378,
+      "sha256": "ac5858b4d9ed6cc6d1a151cf8ea2c1d19d2b28284cc25d9d87941741ce32b08d"
+    },
+    {
+      "path": "archive/research/statement_count_year_2014_2025.csv",
+      "size_bytes": 262,
+      "sha256": "6abb29af3a62bba1f108c738ae213f1516ed86c5c10ed1563f4655cd3667a9fa"
+    },
+    {
+      "path": "archive/research/subject_year_2014_2025.csv",
+      "size_bytes": 521,
+      "sha256": "538ea920b0983de0645199b378115f50f02499d32c23319050fbec711db83e71"
+    },
+    {
+      "path": "archive/research/topic_frequency_top100_2014_2025.csv",
+      "size_bytes": 4251,
+      "sha256": "80b8eaaab5f647823aff549fc6c529e05fee1adb9b757e49677628d69b8d0ea1"
+    },
+    {
+      "path": "archive/source_packages/COACHING_MOCK_ANALYSIS_2026_2027_OVERVIEW_v1.md",
+      "size_bytes": 11374,
+      "sha256": "09caeab96b0d1b7b6011ddf7e957924612f90b80e9c29b8b3b776bec850ca591"
+    },
+    {
+      "path": "archive/source_packages/POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.zip",
+      "size_bytes": 2782,
+      "sha256": "266225eb2039f0008c8d491dc38c8d220f1430d490c38a1a50e0fbdce4872396"
+    },
+    {
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2016_COMPLETE_YEAR_v1.csv",
+      "size_bytes": 28044,
+      "sha256": "80c7f91557a8b642eb08911f167e17986d222d82b6e1198269f07ff55cb4f34e"
+    },
+    {
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2016_TRANCHE_v0_3.csv",
+      "size_bytes": 5056,
+      "sha256": "2cb67e6e0b15798a0388b2e935d26452cc92eaf01f8fb65e261f1f1833ae47c9"
+    },
+    {
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2017_2026_COMPLETE_v1.zip",
+      "size_bytes": 39344,
+      "sha256": "4675aa3ff2bb3d467b0591cef52d11a2090304676de208809a6c34366cebf45e"
+    },
+    {
+      "path": "archive/source_packages/PYQ_SOURCE_TRACKING_2017_2026_RESEARCH_v2.zip",
+      "size_bytes": 42221,
+      "sha256": "7883336c66e0b770d7ab8dd7196b0e2e996bc3c5aaa88f9a30403486a16cd31b"
+    },
+    {
+      "path": "assets/icon-192.png",
+      "size_bytes": 1118,
+      "sha256": "2fc1e8f0678602916c6534ec2e676da063a331ad307336e0c9d1aa5a6a6df381"
+    },
+    {
+      "path": "assets/icon-512.png",
+      "size_bytes": 3581,
+      "sha256": "2f4d55e3484654db489f072e600d1f35443d2ea15ecec9df7751ed6c5b0f0fa3"
+    },
+    {
+      "path": "assets/icon.svg",
+      "size_bytes": 490,
+      "sha256": "65ff70a4d388e0a14b6e7b36b691bf4ebc8b929e004dffdd540382df906bbcb4"
+    },
+    {
+      "path": "data/PORTAL_DATA_MANIFEST_v3.json",
+      "size_bytes": 1661,
+      "sha256": "49f364dbdd7e6f59c3d19aa5898d5eca8dbf05a3ebc0e0393a288787b2b08ec5"
+    },
+    {
+      "path": "data/TRAINING_DATA_MANIFEST_v2.json",
+      "size_bytes": 777,
+      "sha256": "c55cc045eec8f26bfeee801fef5713eee4eb7975ba74d347d49c1056e8d81b9f"
+    },
+    {
+      "path": "data/all_files_manifest_v4.json",
+      "size_bytes": 13354,
+      "sha256": "4b20b33c2470c6a52cea3e77a76ff286c4d6adfd85d85f1f8644f83159dd4aae"
+    },
+    {
+      "path": "data/analysis/ca_signal_by_year_2014_2026.csv",
+      "size_bytes": 166,
+      "sha256": "b7d4edbc994c5c8caf3cea1035821cc82aa39105cfa708c416d3dbd690eede43"
+    },
+    {
+      "path": "data/analysis/format_analysis_2014_2026.csv",
+      "size_bytes": 396,
+      "sha256": "240d709d8fcca4c66b28d7e1a5366366f376d4e30621b3732ac5c9dd9ea667bc"
+    },
+    {
+      "path": "data/analysis/format_by_year_2014_2026.csv",
+      "size_bytes": 349,
+      "sha256": "c242964dbd66972719e3b11e2ef743f84f67119839e1ac1c35de10be31f76482"
+    },
+    {
+      "path": "data/analysis/freeze_manifest_phase_a.json",
+      "size_bytes": 496,
+      "sha256": "5b77cd5d445b989205b60d9e34c56a35d7b68e0d75e90d56ada292238fb77950"
+    },
+    {
+      "path": "data/analysis/phase_a_data_freeze_report.md",
+      "size_bytes": 3606,
+      "sha256": "8775b4127a46b1d3cd6dcd84825bc6c497f80995e954813b68cb3561c002e0fa"
+    },
+    {
+      "path": "data/analysis/phase_a_integrity.json",
+      "size_bytes": 616,
+      "sha256": "a00b286e7c7efaa64a78f59b871f805901331322debf60d760aae91bf41af516"
+    },
+    {
+      "path": "data/analysis/phase_a_report.md",
+      "size_bytes": 2401,
+      "sha256": "0de85ed27cecaf0450f0420c804ef4e9ac241fa8c2d56fbb282605531ac7a380"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/DIFFICULTY_YEAR_2014_2025.csv",
+      "size_bytes": 185,
+      "sha256": "5219a9a29ad4c6a25ade824d97d7c24ea37bef8c0d0edb1bd6fb2eaeeaf0bae1"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/FORMAT_YEAR_2014_2025.csv",
+      "size_bytes": 294,
+      "sha256": "5839b21d1cc2e542e4b085861b8d0e3dc16d964712b7ef83320556b49eac473b"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/MOCK_GENERATION_MODEL_SPEC.json",
+      "size_bytes": 1301,
+      "sha256": "ba9a24ffad6c9907f35f4cac6e86dd6fb3c70e7cc97d689965a0e8d10babf9bd"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/PERIOD_SUBJECT_AVERAGES.csv",
+      "size_bytes": 378,
+      "sha256": "ac5858b4d9ed6cc6d1a151cf8ea2c1d19d2b28284cc25d9d87941741ce32b08d"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/PYQ_ANALYSIS_REPORT_2014_2026.md",
+      "size_bytes": 17969,
+      "sha256": "33eab94ec4f18f769fb45eb521216d0c51e59091340683d6988c73114a9c837a"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/PYQ_ANALYSIS_SUMMARY.json",
+      "size_bytes": 19845,
+      "sha256": "c5b342c91c3459e9b838e2146f48eb5e9ed78a509502ff1e6545ba57c294a695"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/PYQ_MASTER_METADATA_2014_2025.csv",
+      "size_bytes": 200757,
+      "sha256": "e0fc10c1fa1bfc63bbb778440197148bf8a36171a26a8d24a3abe7d2d275503c"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/PYQ_MASTER_METADATA_2014_2025.json",
+      "size_bytes": 649091,
+      "sha256": "e854def70fbfe5c60ecac7e0d3ab8a2939775826f9f49da2e39656a6475fca64"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/QA_FLAGGED_QUESTIONS.csv",
+      "size_bytes": 3982,
+      "sha256": "62eb4f22c62f9e698b790595e5be098cb3f6e4f98bd81ffc10aee354ca5b41b9"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/README.txt",
+      "size_bytes": 821,
+      "sha256": "d1704f97053e5f1fffd81de9dfbef0a4be5fac8f289f503b62486d5cd0e44ea4"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/STATEMENT_LOAD_YEAR_2014_2025.csv",
+      "size_bytes": 262,
+      "sha256": "6abb29af3a62bba1f108c738ae213f1516ed86c5c10ed1563f4655cd3667a9fa"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/SUBJECT_YEAR_2014_2025.csv",
+      "size_bytes": 521,
+      "sha256": "538ea920b0983de0645199b378115f50f02499d32c23319050fbec711db83e71"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/TOPIC_FREQUENCY_TOP100_2014_2025.csv",
+      "size_bytes": 4251,
+      "sha256": "80b8eaaab5f647823aff549fc6c529e05fee1adb9b757e49677628d69b8d0ea1"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/difficulty_year_2014_2025.csv",
+      "size_bytes": 185,
+      "sha256": "5219a9a29ad4c6a25ade824d97d7c24ea37bef8c0d0edb1bd6fb2eaeeaf0bae1"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/format_year_2014_2025.csv",
+      "size_bytes": 294,
+      "sha256": "5839b21d1cc2e542e4b085861b8d0e3dc16d964712b7ef83320556b49eac473b"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/period_subject_averages.csv",
+      "size_bytes": 378,
+      "sha256": "ac5858b4d9ed6cc6d1a151cf8ea2c1d19d2b28284cc25d9d87941741ce32b08d"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/statement_count_year_2014_2025.csv",
+      "size_bytes": 262,
+      "sha256": "6abb29af3a62bba1f108c738ae213f1516ed86c5c10ed1563f4655cd3667a9fa"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/subject_year_2014_2025.csv",
+      "size_bytes": 521,
+      "sha256": "538ea920b0983de0645199b378115f50f02499d32c23319050fbec711db83e71"
+    },
+    {
+      "path": "data/analysis/pyq_analysis_package_2014_2026/topic_frequency_top100_2014_2025.csv",
+      "size_bytes": 4251,
+      "sha256": "80b8eaaab5f647823aff549fc6c529e05fee1adb9b757e49677628d69b8d0ea1"
+    },
+    {
+      "path": "data/analysis/qa_summary_phase_a.json",
+      "size_bytes": 1137,
+      "sha256": "1959c06cbdc64a555047e5963fccec50bfd00e76c73ae03e7537d8df30eda645"
+    },
+    {
+      "path": "data/analysis/source_status_2014_2016.csv",
+      "size_bytes": 89,
+      "sha256": "f1ec79f50f3c322578e87492f3d5b6c5d5f36aca442eb9dd5eb833df008b38ae"
+    },
+    {
+      "path": "data/analysis/subject_by_year_2014_2026.csv",
+      "size_bytes": 551,
+      "sha256": "40a9c32485a70393a2ae24c0ddf97f3dd05d3bb3bfe391dac1d1a1c944497884"
+    },
+    {
+      "path": "data/analysis/subtopic_recurrence_2014_2026.csv",
+      "size_bytes": 27103,
+      "sha256": "45a040dd12ccf1c00c26c3016bb2404feecf0fbf0607fb22e26673fb7f631de6"
+    },
+    {
+      "path": "data/analysis/year_analysis_2014_2026.csv",
+      "size_bytes": 1317,
+      "sha256": "7b27951e3960078e2c00c7a8f67e5abfd070a97358e898b97616cd1dbd60bf3e"
+    },
+    {
+      "path": "data/archives/phase_a_input_workbook_provenance.xlsx",
+      "size_bytes": 354485,
+      "sha256": "1b9a65512240e11dca0363a7dffff4b3484192af421dc252279fd1f63d7e85b6"
+    },
+    {
+      "path": "data/archives/precision_training_state_2017_2026_source.xlsx",
+      "size_bytes": 354485,
+      "sha256": "1b9a65512240e11dca0363a7dffff4b3484192af421dc252279fd1f63d7e85b6"
+    },
+    {
+      "path": "data/coaching/coaching_mock_analysis_overview_2026_2027.md",
+      "size_bytes": 11374,
+      "sha256": "09caeab96b0d1b7b6011ddf7e957924612f90b80e9c29b8b3b776bec850ca591"
+    },
+    {
+      "path": "data/coaching/coaching_schedule_allocation_2026_2027.csv",
+      "size_bytes": 1187,
+      "sha256": "d34710076edc848af3b8016d6870ab3bf4899073829a6cabaf9a75e482147d3a"
+    },
+    {
+      "path": "data/coaching/coaching_schedule_analysis_2026_2027.md",
+      "size_bytes": 2546,
+      "sha256": "0683966c9b40ea05574e6c4aaa32c9fdf988286d42c63cb2c32b65c78ed2a369"
+    },
+    {
+      "path": "data/core/answer_qa_baseline.csv",
+      "size_bytes": 900,
+      "sha256": "6efc433f5df19c450f9932d76565a7a400635d5b26712db7f35c8cf74c140e14"
+    },
+    {
+      "path": "data/core/pyq_master_2014_2026.csv",
+      "size_bytes": 190166,
+      "sha256": "5ac0b0b3756d74f5f397f192ac22cc222370eea240d506bf11f16be92f264eaf"
+    },
+    {
+      "path": "data/core/qa_gates_baseline.csv",
+      "size_bytes": 1795,
+      "sha256": "b027f5afae90d3e147c8091e37ef39d3f6ea622b67e85a690754fa924174af6b"
+    },
+    {
+      "path": "data/core/source_registry_baseline.csv",
+      "size_bytes": 4609,
+      "sha256": "03d0bc695d8e0378211d38b847ea3ba42dc844c6063cf2c19c44fe2a7d5c9662"
+    },
+    {
+      "path": "data/core/source_tracking_2014_2016_descriptive.csv",
+      "size_bytes": 135264,
+      "sha256": "87da67f7f3ba9746d9c1f6eda3df0af8561d4d5c6c6eb915190363848524e423"
+    },
+    {
+      "path": "data/core/source_tracking_2014_2026.csv",
+      "size_bytes": 1408389,
+      "sha256": "23224f5853e328f5a4150b31d8085dd2ece4eb663fa457a9cef269d509f93fcd"
+    },
+    {
+      "path": "data/current_quiz_stream_post_2026.csv",
+      "size_bytes": 2031,
+      "sha256": "06f0ca514cf3346de6e3df0c4a4368a03eab41608a64b9395aab6347a41e7fa7"
+    },
+    {
+      "path": "data/current_quiz_stream_post_2026_v3.csv",
+      "size_bytes": 2031,
+      "sha256": "06f0ca514cf3346de6e3df0c4a4368a03eab41608a64b9395aab6347a41e7fa7"
+    },
+    {
+      "path": "data/embedded_core.js",
+      "size_bytes": 3561783,
+      "sha256": "73831fd3fc619fbbb89c88d06e909818ac8ff021044fad530a43b8e526f644db"
+    },
+    {
+      "path": "data/feature_registry_v4.csv",
+      "size_bytes": 3508,
+      "sha256": "dd013a59b9e138e7cdd245f70c49b47dd9e420a432fe4c54733f834da629df81"
+    },
+    {
+      "path": "data/official_paper_links_v4.json",
+      "size_bytes": 2108,
+      "sha256": "31608198c2385c62617a39fbb7e9ab07061d64c043266385a9206e6bbafd3d51"
+    },
+    {
+      "path": "data/portal_v4_feature_manifest.json",
+      "size_bytes": 782,
+      "sha256": "026c833f69560545f06e5465ce37091fd30f297254f6c0b6206f1d595e1d1783"
+    },
+    {
+      "path": "data/post_2026_mock_ecosystem_v2.csv",
+      "size_bytes": 2319,
+      "sha256": "4fcadce3d333a8f0f8a231cefc86ccde68aeca4ac64e39c7c0a70c543213865d"
+    },
+    {
+      "path": "data/pyq_1000_descriptive_source_tracking_v2.csv",
+      "size_bytes": 1770254,
+      "sha256": "bf2402b83cc9c827c280eacdd2545ac98b4f5ae116f65ec6720d2680cb7154c8"
+    },
+    {
+      "path": "data/pyq_1300_master_v4.csv",
+      "size_bytes": 2267054,
+      "sha256": "98f59b0629faa6943540a452f6fc27154f5b1a6dc8360d8ec01c75a8cf2d0721"
+    },
+    {
+      "path": "data/pyq_2014_2026_summary_v4.json",
+      "size_bytes": 1015,
+      "sha256": "bbf732af1fc472e5fb4f3b37b6e6c4ea4951702dd95f06955c0dfc3c8d4528f6"
+    },
+    {
+      "path": "data/pyq_2014_2026_year_summary_v4.csv",
+      "size_bytes": 691,
+      "sha256": "5ac1ea6c79cd97cdee24a8b4014537ebef77befaa8899d11be924a3ae908d3aa"
+    },
+    {
+      "path": "data/pyq_answer_qa_flags_v2.csv",
+      "size_bytes": 908,
+      "sha256": "8be730019c57dd74719a764de7fe99096b66e9b488b2aa3b055e962436262b95"
+    },
+    {
+      "path": "data/qa_gates_v2.csv",
+      "size_bytes": 1808,
+      "sha256": "f3ab435c0dab14bd7ac07fa28a3a40d741cb53b6d11d20585f795a3313b1300a"
+    },
+    {
+      "path": "data/qa_summary_v2.json",
+      "size_bytes": 444,
+      "sha256": "42eccc08981f9c734d9c0e41b33424a9b4dba421083747e61891addc2ad66043"
+    },
+    {
+      "path": "data/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.csv",
+      "size_bytes": 2945,
+      "sha256": "ffc0f7b5c68236a42e9cc42573854c98b8ca6331a1a213d86bef072389e8041a"
+    },
+    {
+      "path": "data/research/POST_2026_PRELIMS_MOCK_INTELLIGENCE_REPORT_v1.md",
+      "size_bytes": 1785,
+      "sha256": "121830732d95f2677cd2e6108c514dbbd2785301ba366bb903efa1a04d54c302"
+    },
+    {
+      "path": "data/research/external_2026_calibration.csv",
+      "size_bytes": 1172,
+      "sha256": "bb5c8806a0cc534543193ddd5aec71f0fa5f4d4006665047da11bdbc857845d1"
+    },
+    {
+      "path": "data/research/post_2026_mock_ecosystem.csv",
+      "size_bytes": 2311,
+      "sha256": "bf91f77e8eb9c998c5b1db66ab2565eebb23a1c6cb34397d51b110dee29dc4ce"
+    },
+    {
+      "path": "data/research/post_2026_public_quiz_stream.csv",
+      "size_bytes": 1055,
+      "sha256": "c1eb6b7e6444e1a3a5212a1be843909e2cec04bc48d914b57c7ee7e39118f2c3"
+    },
+    {
+      "path": "data/research/post_2026_research_registry.csv",
+      "size_bytes": 4148,
+      "sha256": "a4b985ec3d9db73701359133e088f4c97abe40c8141ded69b781660a854a8522"
+    },
+    {
+      "path": "data/research_archive_manifest_v4.json",
+      "size_bytes": 9269,
+      "sha256": "e69491885d9616f34cd8a65fa9cf92b2006a6d0bb3e804f440abc876632d1f52"
+    },
+    {
+      "path": "data/research_findings_post_2026_v3.json",
+      "size_bytes": 2341,
+      "sha256": "dee27b752aabec01ea938b821a60b4f28da7604ee4e6d9a3ea3682bfd208fa60"
+    },
+    {
+      "path": "data/research_sources_post_2026_v3.csv",
+      "size_bytes": 5315,
+      "sha256": "e5f124f96a6d7c0848b40cb6ba7b77251e1a643be9ab3a61fd7369faa936443e"
+    },
+    {
+      "path": "data/source_registry_post_2026_v2.csv",
+      "size_bytes": 4628,
+      "sha256": "c4c6ce3d7264ac374775932053e7ac8bac160c84b55336e6bdbcb52bf9df02b1"
+    },
+    {
+      "path": "data/training_state_report_v2.md",
+      "size_bytes": 5426,
+      "sha256": "ccb50a317bcd3a78b90aa91055da25f24841dcd8517f749672292c595f09593b"
+    },
+    {
+      "path": "data/training_state_v2.json",
+      "size_bytes": 1387,
+      "sha256": "5a23ccbb0dc88077b4c4abee9dd11cac67cb4840ccc7f8f0534e8a448eb19000"
+    },
+    {
+      "path": "data/year_analysis_2017_2026_v2.csv",
+      "size_bytes": 1064,
+      "sha256": "b92eb8385635126458edaa9b50d301b94040e6530d5d0459364618a110cda670"
+    },
+    {
+      "path": "database/precision_upsc_phase_b.sqlite",
+      "size_bytes": 18034688,
+      "sha256": "55b285823cc1f10a8a8a862adc329820cd39108de5e51aadddc0648abae1e1c9"
+    },
+    {
+      "path": "downloads/PRECISION_UPSC_ALL_RESEARCH_ARCHIVE_v4.zip",
+      "size_bytes": 1165987,
+      "sha256": "b278388c3c605051c3efb9decda7b8536f3818f7c37098e816a1263c15f203f9"
+    },
+    {
+      "path": "downloads/PRECISION_UPSC_Training_State_2017_2026_v2.xlsx",
+      "size_bytes": 354485,
+      "sha256": "1b9a65512240e11dca0363a7dffff4b3484192af421dc252279fd1f63d7e85b6"
+    },
+    {
+      "path": "index.html",
+      "size_bytes": 3028,
+      "sha256": "575b4838801550370767a591d1e4f1db3beb8583200552a3064a071c7b87c612"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "size_bytes": 453,
+      "sha256": "ae41eb0c3e25ad6b3b87cc501704eeac82d585f1fd1d429d4b3c58074f600cf2"
+    },
+    {
+      "path": "styles.css",
+      "size_bytes": 10354,
+      "sha256": "b73a851111af8c6d2b0c18e6b3f7a48b7e8d9d3edc30ff6ac9f2644278acaffa"
+    },
+    {
+      "path": "sw.js",
+      "size_bytes": 1249,
+      "sha256": "1149ac6440ff5487fff371f864b079cc7f1a9bf5ee9f77cde997faeeef835a20"
+    }
+  ],
+  "integrity": {
+    "sqlite": "database/precision_upsc_phase_b.sqlite",
+    "search_index_records": 7317
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "version": "V8.7.5-STABILITY",
+  "scope": "Personal UPSC CSE Prelims 2027 GS-I portal",
+  "base": "StudyTracker / PRECISION V8.4 repaired",
+  "data": {
+    "prelims_pyq_years": [
+      2014,
+      2026
+    ],
+    "prelims_pyq_count": 1300,
+    "mock_slots": 50,
+    "imported_schedule_papers": 46,
+    "mains_trend_years": [
+      2013,
+      2026
+    ],
+    "mains_topic_rows": 60,
+    "feature_registry_rows": 242,
+    "stability_patch": "v875-stability-upgrade.js"
+  },
+  "source_artifacts": {
+    "schedule_workbook": "data/schedule/UPSC_Prelims_2027_46_Test_Calendar_Final-2.xlsx",
+    "schedule_normalized": "data/schedule_2027_v1.json",
+    "mains_trend": "data/mains_gs_trend_2013_2026.json",
+    "prelims_pyq": "data/pyq_1300_master_v4.csv",
+    "features": "data/feature_registry_v86.csv"
+  },
+  "views": [
+    "overview",
+    "study",
+    "pyq",
+    "trends",
+    "mocks",
+    "research",
+    "qa",
+    "weak",
+    "intelligence",
+    "threeD",
+    "ai",
+    "admin",
+    "blueprint",
+    "training",
+    "engine",
+    "attempt",
+    "evaluation",
+    "result",
+    "error",
+    "revision",
+    "reports",
+    "vault",
+    "audit",
+    "health",
+    "schedule",
+    "answerKey"
+  ],
+  "ai": {
+    "model_default": "mistral-small-2603",
+    "response_language_default": "English",
+    "context_policy": "Use portal-local evidence first; never invent stored values; distinguish web evidence from portal evidence.",
+    "memory": "Browser-persistent AI memory and training notes under dedicated V8.6.1 localStorage namespaces; V8.7 remains backward-compatible.",
+    "conversation_threads": [
+      "normalConversationId",
+      "webConversationId"
+    ],
+    "web_search": "Attach built-in web_search only when starting a new Mistral conversation; follow-up appends omit tools.",
+    "admin": "Allow-list only; no code execution, secret extraction, data deletion, or security bypass."
+  },
+  "security": {
+    "startup_password_gate": true,
+    "api_secret_client_bundle": false,
+    "note": "Local portal password gate uses a salted PBKDF2 hash on the device. The password itself is never stored or sent to the server. This is a client-side personal-use lock, not a server-side account/authentication system."
+  },
+  "performance": {
+    "sidebar": "Sticky/static while main content scrolls",
+    "focus_view": "Optional sidebar-free tab mode",
+    "smooth_scroll": true,
+    "content_visibility": "auto on legacy cards",
+    "boot": "Shell-first boot; heavy search index remains lazy; background hydration avoids blocking the initial gate."
+  },
+  "preservation": {
+    "policy": "Additive integration; original V8.4 data and views preserved",
+    "engine": "Existing 50-slot engine preserved; first 46 slots enriched from imported schedule; remaining 4 stay unbound."
+  },
+  "verification": {
+    "required_passes": 4,
+    "levels": [
+      "static QA",
+      "functional smoke",
+      "syntax/API validation",
+      "data/package integrity + local HTTP smoke"
+    ],
+    "browser_live_note": "Container Chromium was not usable for a reliable visual browser run in this environment; Vercel live browser verification remains deployment-side."
+  },
+  "release_layers": [
+    "V8.7.5 stability / UX / schedule continuity"
+  ]
+}

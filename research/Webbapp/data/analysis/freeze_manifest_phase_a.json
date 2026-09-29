@@ -1,0 +1,11 @@
+{
+  "phase": "A",
+  "input_workbook": "PRECISION_UPSC_Training_State_2017_2026_v2-7.xlsx",
+  "input_sha256": "1b9a65512240e11dca0363a7dffff4b3484192af421dc252279fd1f63d7e85b6",
+  "historical_2014_2016_source": "PRECISION_UPSC_Training_State_2014_2026_V5.xlsx",
+  "historical_2014_2016_sha256": "c34dd67b8a08f17e9fc3f9d2b68af5cae83a5475e712df77d04d28a3c563798e",
+  "generated_at_utc": "2026-09-24T07:23:41.752545+00:00",
+  "records": 1300,
+  "id_unique": true,
+  "post_2026_cutoff": "2026-05-25"
+}
