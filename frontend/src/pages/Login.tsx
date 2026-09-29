@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Backdrop3D from "@/components/Backdrop3D";
 import { ChakraMark } from "@/components/kit";
-import { apiGet, apiPost } from "@/lib/api";
+import { ApiError, apiGet, apiPost } from "@/lib/api";
 import { deviceId } from "@/lib/device";
 import { beginSession } from "@/lib/session";
 import type { MeOut } from "@/lib/types";
@@ -39,11 +39,23 @@ export default function Login() {
       setPin("");
       setShake(true);
       window.setTimeout(() => setShake(false), 500);
-      const detail =
-        error instanceof Error && "body" in error
-          ? (error as { body?: { detail?: string } }).body?.detail
-          : undefined;
-      toast.error(detail ?? "Incorrect password — try again");
+      if (error instanceof ApiError) {
+        const detail =
+          typeof error.body === "object" && error.body !== null && "detail" in error.body
+            ? error.body.detail
+            : undefined;
+        if (typeof detail === "string") {
+          toast.error(detail);
+        } else if (error.status === 401) {
+          toast.error("Incorrect password — try again");
+        } else if (error.status >= 500) {
+          toast.error("Server setup error. Check Vercel environment variables and redeploy.");
+        } else {
+          toast.error("Could not unlock. Check the server response.");
+        }
+      } else {
+        toast.error("Could not reach the server. Check your deployment.");
+      }
     },
   });
 
