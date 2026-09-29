@@ -1,0 +1,14 @@
+.git
+.emergent
+research/Webbapp
+tests
+memory
+TEMPLATE.md
+Dockerfile
+railway.toml
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+frontend/node_modules
+frontend/dist

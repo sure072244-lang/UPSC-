@@ -180,3 +180,15 @@ body::before {
   .chakra-orbit { animation: none; }
   .animate-shake { animation: none; }
 }
+
+@media (pointer: coarse) {
+  button,
+  [role="button"] {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .chakra-orbit {
+    animation: none;
+  }
+}

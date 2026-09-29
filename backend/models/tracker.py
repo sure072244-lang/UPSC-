@@ -18,7 +18,7 @@ def _now() -> datetime:
 # --- auth (PIN gate) ---
 class UnlockIn(BaseModel):
     pin: str
-    device_id: str | None = None
+    device_id: str = Field(min_length=16, max_length=128)
 
 
 class MeOut(BaseModel):

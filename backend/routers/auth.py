@@ -40,18 +40,31 @@ async def _active_pin_hash() -> str:
     return _pin_hash(pin)
 
 
-def create_token() -> str:
-    payload = {"exp": datetime.now(timezone.utc) + timedelta(days=30), "scope": "tracker"}
+def create_token(device_id: str) -> str:
+    payload = {
+        "exp": datetime.now(timezone.utc) + timedelta(days=30),
+        "scope": "tracker",
+        "device_id": device_id,
+    }
     return jwt.encode(payload, _secret(), algorithm=ALGORITHM)
 
 
-async def require_auth(tracker_session: str | None = Cookie(default=None, alias=COOKIE_NAME)) -> None:
-    if not tracker_session:
+async def require_auth(
+    tracker_session: str | None = Cookie(default=None, alias=COOKIE_NAME),
+    x_device_id: str | None = Header(default=None, alias="X-Device-Id"),
+) -> None:
+    if not tracker_session or not x_device_id or not 16 <= len(x_device_id) <= 128:
         raise HTTPException(status_code=401, detail="Vault is locked")
     try:
-        jwt.decode(tracker_session, _secret(), algorithms=[ALGORITHM])
+        claims = jwt.decode(tracker_session, _secret(), algorithms=[ALGORITHM])
     except jwt.PyJWTError:
         raise HTTPException(status_code=401, detail="Vault is locked")
+    token_device_id = claims.get("device_id")
+    if not isinstance(token_device_id, str) or not hmac.compare_digest(token_device_id, x_device_id):
+        raise HTTPException(status_code=401, detail="Vault is locked on this device")
+    approved_device = await db.devices.find_one({"id": x_device_id, "approved": True}, {"_id": 1})
+    if not approved_device:
+        raise HTTPException(status_code=401, detail="This device is not trusted")
 
 
 async def _check_device(device_id: str, user_agent: str) -> None:
@@ -62,7 +75,7 @@ async def _check_device(device_id: str, user_agent: str) -> None:
     owner out of their own vault).
     """
     if not device_id:
-        return
+        raise HTTPException(status_code=400, detail="Device identity is required")
     now = datetime.now(timezone.utc)
     has_trusted = await db.devices.count_documents({"approved": True}) > 0
     known = await db.devices.find_one({"id": device_id})
@@ -102,13 +115,14 @@ async def unlock(input: UnlockIn, response: Response, request: Request) -> MeOut
     expected = await _active_pin_hash()
     if not hmac.compare_digest(_pin_hash(input.pin.strip()), expected):
         raise HTTPException(status_code=401, detail="Incorrect passcode")
-    await _check_device(
-        (input.device_id or "").strip(), request.headers.get("user-agent", "")[:200]
-    )
+    device_id = input.device_id.strip()
+    await _check_device(device_id, request.headers.get("user-agent", "")[:200])
     response.set_cookie(
         COOKIE_NAME,
-        create_token(),
+        create_token(device_id),
         httponly=True,
+        secure=os.environ.get("COOKIE_SECURE", "true").strip().lower()
+        not in {"0", "false", "no"},
         samesite="lax",
         max_age=30 * 24 * 3600,
         path="/",

@@ -144,6 +144,28 @@ export default function Header() {
           </Sheet>
         </div>
       </div>
+      <nav
+        aria-label="Tablet navigation"
+        className="hidden items-center gap-1 overflow-x-auto border-t border-[#E8E3D7]/70 px-4 py-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:flex xl:hidden"
+      >
+        {NAV.slice(0, 6).map((item) => (
+          <NavLink
+            key={item.path}
+            to={item.path}
+            end={item.path === "/"}
+            data-testid={`tablet-${item.testId}`}
+            className={({ isActive }) =>
+              cn(
+                "min-h-11 shrink-0 whitespace-nowrap rounded-lg px-3 py-2.5 text-sm font-medium",
+                isActive ? "bg-white shadow-sm" : "text-[#5E6258] hover:bg-white/70",
+              )
+            }
+            style={({ isActive }) => (isActive ? { color: item.tint } : undefined)}
+          >
+            {item.name}
+          </NavLink>
+        ))}
+      </nav>
       <SessionDialog open={logOpen} onOpenChange={setLogOpen} />
     </header>
   );

@@ -1,5 +1,17 @@
 # UPSC PYQ Study App
 
+## Vercel deployment
+
+The repository root is the Vercel project root. [`vercel.json`](vercel.json) builds the Vite site, while [`pyproject.toml`](pyproject.toml) points Vercel's FastAPI runtime at the existing backend. Static assets are served through Vercel's CDN; API routes remain on the same origin.
+
+1. In Vercel, import `https://github.com/sure072244-lang/UPSC-` and keep the project root set to `.`.
+2. Add MongoDB Atlas or another persistent MongoDB provider. Set `MONGO_URL` and `DB_NAME` in Vercel Environment Variables.
+3. Set `APP_SECRET` to a unique random value of at least 32 characters and `APP_PIN` to your private 4-32 character passcode. Keep `COOKIE_SECURE=true` for Vercel HTTPS. Set `APP_URL` and `CORS_ORIGINS` to the deployed Vercel origin.
+4. Add `MISTRAL_API_KEY` for Professor AI/OMR; `NOTION_TOKEN` and `NOTION_DATABASE_ID` are optional. Use [`backend/.env.example`](backend/.env.example) as the full variable checklist. Do not commit real `.env` files.
+5. Deploy, then open the new URL on the Redmi Pad SE and unlock there first. The first browser to unlock is trusted. Approve any additional devices from Settings; clearing that browser's site data creates a new device identity.
+
+Vercel does not provide persistent local disk storage, so MongoDB must be external. The browser device ID is a stable browser identity, not Android hardware attestation; keep the passcode private and use the first-device approval flow.
+
 ## Railway deployment
 
 This repository contains the UPSC PYQ study app: React/Vite frontend, FastAPI backend, PYQ datasets, and research archive. Railway deploys it as one service: the Docker build compiles the frontend and FastAPI serves it with `/api` on the same origin.
@@ -12,15 +24,14 @@ This repository contains the UPSC PYQ study app: React/Vite frontend, FastAPI ba
 
 Railway detects the root `Dockerfile`, uses the platform `PORT`, and checks `/api/` for health. No local `.env` file is required or included in the deployment image. Configure a persistent external MongoDB service before using the app; the container filesystem is ephemeral.
 
-Minimal split backend/frontend starter: **FastAPI + MongoDB** behind a
-**Vite + React 19 + TypeScript** frontend, joined by a small typed fetch layer
-over `/api`. This is a bare skeleton — no app features are implemented. Build on
-top of it.
+The study app includes a React/Vite frontend, FastAPI/MongoDB backend, PIN vault,
+study tracking, PYQ practice, spaced revision, mock tests, analytics, optional
+AI/OMR, and Notion sync.
 
 ## Layout
 
 ```
-farm-ts/
+upsc-pyq-study-app/
   backend/   FastAPI + motor (async MongoDB) + Pydantic v2 — python, /root/.venv
   frontend/  Vite + React 19 + Tailwind v4 + shadcn/ui (TypeScript strict)
   tests/     Playwright e2e workspace (pre-scaffolded)

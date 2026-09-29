@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 import os
 import logging
+import sys
 from pathlib import Path
 from pydantic import BaseModel, Field
 from typing import List
@@ -13,7 +14,9 @@ import uuid
 from datetime import datetime
 
 
-ROOT_DIR = Path(__file__).parent
+ROOT_DIR = Path(__file__).resolve().parent
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
 load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection
@@ -98,13 +101,17 @@ app.include_router(api_router)
 FRONTEND_DIST = ROOT_DIR.parent / "frontend" / "dist"
 
 if FRONTEND_DIST.is_dir():
-    @app.get("/{path:path}", include_in_schema=False)
-    async def serve_frontend(path: str):
-        frontend_root = FRONTEND_DIST.resolve()
-        requested_file = (frontend_root / path).resolve()
-        if requested_file.is_relative_to(frontend_root) and requested_file.is_file():
-            return FileResponse(requested_file)
-        return FileResponse(frontend_root / "index.html")
+    vercel_frontend = getattr(app, "frontend", None)
+    if os.environ.get("VERCEL") and callable(vercel_frontend):
+        vercel_frontend("/", directory=str(FRONTEND_DIST.resolve()))
+    else:
+        @app.get("/{path:path}", include_in_schema=False)
+        async def serve_frontend(path: str):
+            frontend_root = FRONTEND_DIST.resolve()
+            requested_file = (frontend_root / path).resolve()
+            if requested_file.is_relative_to(frontend_root) and requested_file.is_file():
+                return FileResponse(requested_file)
+            return FileResponse(frontend_root / "index.html")
 
 app.add_middleware(
     CORSMiddleware,

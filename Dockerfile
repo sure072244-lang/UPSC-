@@ -13,8 +13,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_NO_CACHE_DIR=1
 
 WORKDIR /app/backend
-COPY backend/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY backend/requirements-prod.txt ./
+RUN pip install --no-cache-dir -r requirements-prod.txt
 COPY backend/ ./
 COPY --from=frontend-build /app/frontend/dist /app/frontend/dist
 
