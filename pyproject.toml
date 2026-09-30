@@ -1,5 +1,8 @@
 [tool.vercel]
 entrypoint = "backend.server:app"
 
+[tool.vercel.scripts]
+build = "yarn --cwd frontend install --frozen-lockfile && yarn --cwd frontend build"
+
 [tool.vercel.fastapi.static]
 cdn = true
