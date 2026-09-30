@@ -32,6 +32,7 @@ from routers.insights import router as insights_router
 from routers.notion import router as notion_router
 from routers.profile import router as profile_router
 from routers.pyq import router as pyq_router
+from routers.research import router as research_router
 from routers.revisions import router as revisions_router
 from routers.sessions import router as sessions_router
 from routers.subjects import router as subjects_router
@@ -83,12 +84,30 @@ async def data_diagnostics():
 
     pyq_rows = row_count("pyq_master_2014_2026.csv")
     source_rows = row_count("source_tracking_2014_2026.csv")
-    question_text_rows = row_count("source_tracking_2014_2026.csv", "question_text_source")
+    active_ids: set[str] = set()
+    text_status: dict[str, str] = {}
+    try:
+        with (data_dir / "pyq_master_2014_2026.csv").open(newline="", encoding="utf-8-sig") as source:
+            active_ids = {row["id"] for row in csv.DictReader(source) if row.get("id")}
+        text_file = data_dir / "research" / "pyq_text_master_2014_2026.csv"
+        with text_file.open(newline="", encoding="utf-8-sig") as source:
+            text_status = {
+                row["id"]: row.get("text_quality", "")
+                for row in csv.DictReader(source)
+                if row.get("id") in active_ids
+            }
+    except OSError:
+        pass
+    question_text_rows = sum(status == "FULL_TEXT" for status in text_status.values())
+    title_only_rows = sum(status == "TOPIC_TITLE_ONLY" for status in text_status.values())
+    unmatched_text_rows = len(active_ids - text_status.keys())
     official_paper_rows = row_count("source_tracking_2014_2026.csv", "official_paper_source_url")
     return {
         "pyq_rows": pyq_rows,
         "source_rows": source_rows,
         "question_text_rows": question_text_rows,
+        "title_only_question_rows": title_only_rows,
+        "unmatched_question_text_rows": unmatched_text_rows,
         "official_paper_rows": official_paper_rows,
         "pyq_available": pyq_rows > 0,
         "mongo_configured": mongo_configured,
@@ -118,6 +137,7 @@ api_router.include_router(tests_router)
 api_router.include_router(insights_router)
 api_router.include_router(analytics_router)
 api_router.include_router(pyq_router)
+api_router.include_router(research_router)
 api_router.include_router(ai_router)
 api_router.include_router(notion_router)
 api_router.include_router(admin_router)

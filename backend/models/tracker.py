@@ -242,18 +242,14 @@ class PyqQuestion(BaseModel):
 
 
 class PyqQuestionDetail(PyqQuestion):
-    """Full read view of one PYQ — metadata plus every source trail we hold.
-
-    The master corpus is an answer-key + taxonomy inventory (UPSC does not release
-    machine-readable stems), so the reader shows the verified metadata and links
-    straight to the official paper and the researched source for that question.
-    """
+    """Detailed PYQ record with text-quality marker and source trail."""
 
     news_cue: bool = False
     stem_word_count: int = 0
     option_count: int = 4
     answer_valid: bool = True
     question_text: str = ""
+    text_quality: str = "UNAVAILABLE"
     official_paper_url: str = ""
     analysis_source_name: str = ""
     analysis_source_url: str = ""

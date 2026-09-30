@@ -21,6 +21,7 @@ import type {
   PyqQuestion,
   PyqQuestionDetail,
   Revision,
+  ResearchDashboard,
   Subject,
   StudySession,
   TestRecord,
@@ -50,6 +51,7 @@ export const qk = {
   aiSessions: ["ai", "sessions"] as const,
   omrRuns: ["ai", "omr", "runs"] as const,
   devices: ["auth", "devices"] as const,
+  research: ["research", "dashboard"] as const,
 };
 
 export const useSubjects = () =>
@@ -156,3 +158,11 @@ export const useOmrRuns = () =>
 
 export const useDevices = () =>
   useQuery({ queryKey: qk.devices, queryFn: () => apiGet<DeviceOut[]>("/auth/devices") });
+
+export const useResearchDashboard = () =>
+  useQuery({
+    queryKey: qk.research,
+    queryFn: () => apiGet<ResearchDashboard>("/research/dashboard"),
+    staleTime: 5 * 60 * 1000,
+    retry: false,
+  });

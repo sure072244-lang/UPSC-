@@ -12,6 +12,8 @@ type DataDiagnostics = {
   pyq_rows: number;
   source_rows: number;
   question_text_rows: number;
+  title_only_question_rows: number;
+  unmatched_question_text_rows: number;
   official_paper_rows: number;
   pyq_available: boolean;
   mongo_configured: boolean;
@@ -209,7 +211,10 @@ export default function Login() {
                   {dataStatus.data.pyq_available ? " ready" : " missing from deployment"}
                 </p>
                 <p className="mt-1">
-                  Stems: {dataStatus.data.question_text_rows.toLocaleString()} · official paper links: {dataStatus.data.official_paper_rows.toLocaleString()}
+                  Text: {dataStatus.data.question_text_rows.toLocaleString()} full · {dataStatus.data.title_only_question_rows.toLocaleString()} title-only · {dataStatus.data.unmatched_question_text_rows.toLocaleString()} unmatched
+                </p>
+                <p className="mt-1">
+                  Official paper links: {dataStatus.data.official_paper_rows.toLocaleString()}
                 </p>
                 <p className="mt-1">
                   Notion sync: {dataStatus.data.notion_configured ? "token configured" : "NOTION_TOKEN required"}

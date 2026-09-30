@@ -321,11 +321,16 @@ export default function Pyq() {
                   {detail.data.stem_word_count} words in the original stem
                 </p>
               </div>
-              <p className="text-xs leading-relaxed text-[#5E6258]">
-                UPSC does not publish machine-readable question stems, so this bank stores the
-                verified key, taxonomy and source trail. Read the exact wording in the official
-                paper linked below.
-              </p>
+              {detail.data.question_text ? (
+                <section className="rounded-xl border border-[#E8E3D7] bg-white p-4">
+                  <p className="font-mono text-[11px] uppercase text-[#8C6212]">Question text · {detail.data.text_quality.replaceAll("_", " ")}</p>
+                  <p className="mt-2 whitespace-pre-wrap leading-relaxed text-[#1C1D18]">{detail.data.question_text}</p>
+                </section>
+              ) : (
+                <p className="text-xs leading-relaxed text-[#5E6258]">
+                  This record has no full-text match in the research dataset ({detail.data.text_quality.replaceAll("_", " ")}). Use the official paper link for the exact wording.
+                </p>
+              )}
               <div className="grid gap-2">
                 {detail.data.official_paper_url ? (
                   <a

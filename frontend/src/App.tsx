@@ -16,6 +16,7 @@ const Notion = lazy(() => import("@/pages/Notion"));
 const Professor = lazy(() => import("@/pages/Professor"));
 const Pyq = lazy(() => import("@/pages/Pyq"));
 const Revisions = lazy(() => import("@/pages/Revisions"));
+const Research = lazy(() => import("@/pages/Research"));
 const Sessions = lazy(() => import("@/pages/Sessions"));
 const Settings = lazy(() => import("@/pages/Settings"));
 const Subjects = lazy(() => import("@/pages/Subjects"));
@@ -71,6 +72,7 @@ export default function App() {
             <Route path="/sessions" element={<Sessions />} />
             <Route path="/revisions" element={<Revisions />} />
             <Route path="/pyq" element={<Pyq />} />
+            <Route path="/research" element={<Research />} />
             <Route path="/weakness" element={<Weakness />} />
             <Route path="/goals" element={<Goals />} />
             <Route path="/tests" element={<Tests />} />

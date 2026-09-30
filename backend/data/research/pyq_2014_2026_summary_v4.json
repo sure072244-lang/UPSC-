@@ -1,0 +1,40 @@
+{
+  "scope": "2014-2026",
+  "nominal_questions": 1300,
+  "subject_totals": {
+    "Environment & Ecology": 222,
+    "Geography": 137,
+    "Economy": 234,
+    "Science & Technology": 180,
+    "Art & Culture": 69,
+    "Current Affairs": 82,
+    "History": 141,
+    "Polity & Governance": 176,
+    "Indian Polity": 5,
+    "Indian Economy": 26,
+    "Medieval History": 5,
+    "Ancient History": 1,
+    "Modern History": 6,
+    "International Relations": 15,
+    "Sports": 1
+  },
+  "format_totals": {
+    "Single-answer": 441,
+    "Match/Pair": 33,
+    "Multi-statement": 481,
+    "Not classified": 197,
+    "How-many/Count": 100,
+    "Assertion/Relationship": 45,
+    "Scenario/Case": 3
+  },
+  "source_status_totals": {
+    "UNVERIFIED": 1287,
+    "PRIMARY_CANDIDATE": 5,
+    "PRIMARY_VERIFIED": 8
+  },
+  "full_text_questions": 1200,
+  "topic_title_only_questions": 100,
+  "historical_source_date_rule": "Primary source publication date <= PYQ year",
+  "post_2026_mock_cutoff": "2026-05-25",
+  "mock_generation": false
+}

@@ -26,9 +26,11 @@ router = APIRouter(prefix="/pyq", tags=["pyq"], dependencies=[Depends(require_au
 
 DATA_FILE = Path(__file__).parent.parent / "data" / "pyq_master_2014_2026.csv"
 SOURCE_FILE = Path(__file__).parent.parent / "data" / "source_tracking_2014_2026.csv"
+TEXT_FILE = Path(__file__).parent.parent / "data" / "research" / "pyq_text_master_2014_2026.csv"
 _CACHE: list[PyqQuestion] = []
 _RAW: dict[str, dict] = {}
 _SOURCES: dict[str, dict] = {}
+_TEXT_DETAILS: dict[str, dict[str, str]] = {}
 
 
 def _raw_rows() -> dict[str, dict]:
@@ -43,6 +45,25 @@ def _sources() -> dict[str, dict]:
     with SOURCE_FILE.open(newline="", encoding="utf-8") as fh:
         _SOURCES = {r["id"]: r for r in csv.DictReader(fh) if r.get("id")}
     return _SOURCES
+
+
+def _text_details() -> dict[str, dict[str, str]]:
+    global _TEXT_DETAILS
+    if _TEXT_DETAILS or not TEXT_FILE.exists():
+        return _TEXT_DETAILS
+    with TEXT_FILE.open(newline="", encoding="utf-8-sig") as fh:
+        for row in csv.DictReader(fh):
+            question_id = row.get("id", "").strip()
+            if not question_id:
+                continue
+            quality = (row.get("text_quality") or "UNAVAILABLE").strip()
+            _TEXT_DETAILS[question_id] = {
+                "question_text": (row.get("question_text") or "").strip()
+                if quality == "FULL_TEXT"
+                else "",
+                "text_quality": quality,
+            }
+    return _TEXT_DETAILS
 
 
 def _load() -> list[PyqQuestion]:
@@ -119,6 +140,7 @@ async def question_detail(qid: str) -> PyqQuestionDetail:
     if not raw:
         raise HTTPException(status_code=404, detail="Question not found")
     src = _sources().get(qid, {})
+    text = _text_details().get(qid, {})
     return PyqQuestionDetail(
         id=qid,
         year=int(raw["year"]),
@@ -136,7 +158,8 @@ async def question_detail(qid: str) -> PyqQuestionDetail:
         stem_word_count=int(float(raw.get("stem_word_count") or 0)),
         option_count=int(float(raw.get("option_count") or 4)),
         answer_valid=str(raw.get("answer_valid")).lower() == "true",
-        question_text=(src.get("question_text_source") or "").strip(),
+        question_text=text.get("question_text", ""),
+        text_quality=text.get("text_quality", "UNAVAILABLE"),
         official_paper_url=(src.get("official_paper_source_url") or "").strip(),
         analysis_source_name=(src.get("year_analysis_source_name") or "").strip(),
         analysis_source_url=(src.get("year_analysis_source_url") or "").strip(),

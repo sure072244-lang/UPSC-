@@ -1,6 +1,7 @@
 .git
 .github
 .emergent
+research/Webbapp
 **/.env
 **/.env.*
 **/__pycache__

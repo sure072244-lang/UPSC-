@@ -15,7 +15,9 @@ async def test_data_diagnostics_reports_bundled_questions_and_sources():
     assert report["pyq_available"] is True
     assert report["pyq_rows"] == 1300
     assert report["source_rows"] == 1300
-    assert report["question_text_rows"] == 1300
+    assert report["question_text_rows"] == 1198
+    assert report["title_only_question_rows"] == 100
+    assert report["unmatched_question_text_rows"] == 2
     assert report["official_paper_rows"] == 1300
     assert isinstance(report["mongo_configured"], bool)
     assert isinstance(report["notion_configured"], bool)

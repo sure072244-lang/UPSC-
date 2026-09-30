@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
   BookOpen,
+  BarChart3,
   Clock,
   Database,
   GraduationCap,
@@ -29,6 +30,7 @@ const NAV = [
   { name: "Study Log", path: "/sessions", icon: Clock, testId: "nav-sessions", tint: "#0F5B78" },
   { name: "Revisions", path: "/revisions", icon: RotateCcw, testId: "nav-revisions", tint: "#B8860B" },
   { name: "PYQ Bank", path: "/pyq", icon: Library, testId: "nav-pyq", tint: "#1D3A2C" },
+  { name: "Research", path: "/research", icon: BarChart3, testId: "nav-research", tint: "#B8860B" },
   { name: "Weakness", path: "/weakness", icon: Radar, testId: "nav-weakness", tint: "#B91C1C" },
   { name: "Goals", path: "/goals", icon: Target, testId: "nav-goals", tint: "#843B62" },
   { name: "Mock Tests", path: "/tests", icon: GraduationCap, testId: "nav-tests", tint: "#0F5B78" },

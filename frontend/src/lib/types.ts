@@ -200,6 +200,7 @@ export interface PyqQuestionDetail extends PyqQuestion {
   option_count: number;
   answer_valid: boolean;
   question_text: string;
+  text_quality: string;
   official_paper_url: string;
   analysis_source_name: string;
   analysis_source_url: string;
@@ -255,6 +256,73 @@ export interface PyqAttempt {
   items: PyqResultItem[];
   weak_topics: string[];
   created_at: string;
+}
+
+export interface ResearchDashboard {
+  prelims: {
+    summary: {
+      nominal_questions: number;
+      scope: string;
+      subject_totals: Record<string, number>;
+      format_totals: Record<string, number>;
+      source_status_totals: Record<string, number>;
+      full_text_questions: number;
+      topic_title_only_questions: number;
+    };
+    subject_by_year: Record<string, string>[];
+    subtopic_recurrence: {
+      subtopic: string;
+      unique_years: string;
+      question_count: string;
+      years: string;
+      question_ids_sample: string;
+    }[];
+    source_note: string;
+  };
+  mains: {
+    version: string;
+    years: number[];
+    source_note: string;
+    sections: string[];
+    rows: { paper: string; subject: string; topic: string; marks: Record<string, number | null> }[];
+  };
+  weightage: {
+    version: string;
+    note: string;
+    subjects: {
+      subject: string;
+      gs: string;
+      prelimsQuestions: number | null;
+      prelimsTagStatus: string;
+      mainsTaggedMarks2013_2026: number;
+      mainsAverageTaggedMarksPerYear: number | null;
+      mains2026TaggedMarks: number | null;
+      mainsTopicRows: number;
+    }[];
+  };
+  subject_catalog: { id: string; label: string; group: string; accent: string }[];
+  schedule: {
+    version: string;
+    source_file: string;
+    source_selection_note: string;
+    total_papers: number;
+    papers: Record<string, string | number>[];
+  };
+  coverage: {
+    prelims_questions: number;
+    prelims_years: string;
+    full_text_questions: number;
+    topic_title_only_questions: number;
+    without_research_text: number;
+    mains_topic_rows: number;
+    mains_years: number[];
+    taxonomy_subjects: number;
+    optional_subject_labels: string[];
+    full_optional_syllabus_available: boolean;
+    mains_trend_independently_verified: boolean;
+    scheduled_test_papers: number;
+    schedule_is_upsc_official: boolean;
+  };
 }
 
 // --- analytics ---

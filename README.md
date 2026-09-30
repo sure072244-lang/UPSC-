@@ -15,6 +15,19 @@ Vercel does not provide persistent local disk storage, so MongoDB must be extern
 
 The public `/api/diagnostics/data` endpoint reports PYQ, question-text, and official-paper-link counts plus whether MongoDB and Notion variables are present. It never returns secret values. The login page shows the same summary so missing Vercel variables or bundled datasets are visible immediately.
 
+## Research and data coverage
+
+The active app bundles its runtime data under `backend/data`, so the same datasets are available to Railway and Vercel functions:
+
+- Prelims master: 1,300 classified questions for 2014–2026, with a separate 1,300-row source trail and official paper links.
+- Enriched question text: 1,198 active-ID matches marked `FULL_TEXT`, 100 marked `TOPIC_TITLE_ONLY`, and 2 active IDs without a research-text match. The detail API serves wording only for `FULL_TEXT` rows; use the official paper link for the rest.
+- Prelims analytics: subject-by-year counts and 174 subtopic-recurrence rows.
+- Mains research: 60 topic rows across GS-I–IV and 2013–2026. These values were transcribed from supplied screenshots, are not independently verified, and can overlap across composite topic labels; they are research signals, not official UPSC weightage.
+- Subject taxonomy: 23 labels across Prelims, Mains and cross-cutting areas. The supplied files contain only a `Philosophy Optional` label, not full topic-by-topic optional syllabi.
+- 2027 planning schedule: 46 mock-test records from a supplied workbook; this is a study plan, not an official UPSC timetable.
+
+The Research page is available at `/research` and the source-aware aggregate at `/api/research/dashboard`. The older 230-file `research/Webbapp` archive remains in GitHub but is deliberately excluded from Vercel's deployment bundle; its selected structured datasets are copied into `backend/data/research` for the active app. The bundle does not fabricate missing optional-syllabus or setter-source data.
+
 ## Railway deployment
 
 This repository contains the UPSC PYQ study app: React/Vite frontend, FastAPI backend, PYQ datasets, and research archive. Railway deploys it as one service: the Docker build compiles the frontend and FastAPI serves it with `/api` on the same origin.
