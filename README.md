@@ -6,11 +6,13 @@ The repository root is the Vercel project root. [`vercel.json`](vercel.json) bui
 
 1. In Vercel, import `https://github.com/sure072244-lang/UPSC-` and keep the project root set to `.`.
 2. Add MongoDB Atlas or another persistent MongoDB provider. Set `MONGO_URL` and `DB_NAME` in Vercel Environment Variables.
-3. AppLock is disabled by default. No PIN or `APP_SECRET` is needed. To enable it, set both `APP_LOCK_ENABLED=true` and `VITE_APP_LOCK_ENABLED=true`, then also set `APP_PIN` and a unique `APP_SECRET` of at least 32 characters. Keep `COOKIE_SECURE=true` for HTTPS.
+3. AppLock is disabled by default. To enable the device passkey lock, set `APP_LOCK_ENABLED=true` in Vercel Variables and redeploy; the first Redmi Pad SE passkey becomes the owner credential.
 4. Add `MISTRAL_API_KEY` for Professor AI/OMR; `NOTION_TOKEN` and `NOTION_DATABASE_ID` are optional. Use [`backend/.env.example`](backend/.env.example) as the variable checklist. Do not commit real `.env` files.
 5. Deploy and open the new URL. With AppLock disabled, anyone who can access the public URL can read and change the tracker data; do not store sensitive information in this deployment.
 
 Vercel does not provide persistent local disk storage, so MongoDB must be external. The browser device ID is a stable browser identity, not Android hardware attestation; keep the passcode private and use the first-device approval flow.
+
+The public `/api/diagnostics/data` endpoint reports PYQ, question-text, and official-paper-link counts plus whether MongoDB and Notion variables are present. It never returns secret values. The login page shows the same summary so missing Vercel variables or bundled datasets are visible immediately.
 
 ## Railway deployment
 

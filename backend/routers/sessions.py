@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from lib.db import db
 from lib.dates import today_iso
 from models.tracker import StudySession, StudySessionCreate
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/sessions", tags=["sessions"], dependencies=[Depends(require_auth)])
 

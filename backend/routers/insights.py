@@ -7,7 +7,7 @@ from fastapi import APIRouter, Depends
 from lib.db import db
 from lib.dates import today_iso
 from models.tracker import DayPoint, HourPoint, InsightsOut, SubjectPoint
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/insights", tags=["insights"], dependencies=[Depends(require_auth)])
 

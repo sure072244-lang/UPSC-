@@ -231,8 +231,14 @@ export default function Notion() {
       ) : list.length === 0 ? (
         <EmptyState
           icon={<Database className="size-6" />}
-          title="No entries match"
-          hint="Clear the filters, or hit “Sync from Notion” to pull the latest."
+          title={entries.isError ? "Notion data could not be loaded" : "No entries match"}
+          hint={
+            entries.isError
+              ? errDetail(entries.error)
+              : !status.data?.configured
+                ? "Set NOTION_TOKEN in the Vercel project variables, share a database with the integration, then sync."
+                : "Clear the filters, or hit “Sync from Notion” to pull the latest."
+          }
           testId="notion-empty-state"
         />
       ) : (

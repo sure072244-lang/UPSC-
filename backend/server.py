@@ -1,4 +1,5 @@
 import asyncio
+import csv
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, APIRouter
 from fastapi.responses import FileResponse
@@ -20,12 +21,12 @@ if str(ROOT_DIR) not in sys.path:
 load_dotenv(ROOT_DIR / '.env')
 
 # MongoDB connection
-from lib.db import client, db, ensure_indexes
+from lib.db import client, db, ensure_indexes, mongo_configured
 
 from routers.ai import router as ai_router
 from routers.admin import router as admin_router
 from routers.analytics import router as analytics_router
-from routers.auth import router as auth_router
+from routers.passkeys import router as auth_router
 from routers.goals import router as goals_router
 from routers.insights import router as insights_router
 from routers.notion import router as notion_router
@@ -40,7 +41,8 @@ from routers.tests import router as tests_router
 # Startup runs before the yield, shutdown after it. Add your own setup/teardown here.
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app.state.index_task = asyncio.create_task(ensure_indexes())  # background: a big index build must not block boot
+    if mongo_configured:
+        app.state.index_task = asyncio.create_task(ensure_indexes())  # background: a big index build must not block boot
     yield
     client.close()
 
@@ -65,6 +67,33 @@ class StatusCheckCreate(BaseModel):
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
+
+@api_router.get("/diagnostics/data")
+async def data_diagnostics():
+    data_dir = ROOT_DIR / "data"
+
+    def row_count(filename: str, required_field: str = "id") -> int:
+        try:
+            with (data_dir / filename).open(newline="", encoding="utf-8") as data_file:
+                return sum(
+                    1 for row in csv.DictReader(data_file) if row.get(required_field, "").strip()
+                )
+        except OSError:
+            return 0
+
+    pyq_rows = row_count("pyq_master_2014_2026.csv")
+    source_rows = row_count("source_tracking_2014_2026.csv")
+    question_text_rows = row_count("source_tracking_2014_2026.csv", "question_text_source")
+    official_paper_rows = row_count("source_tracking_2014_2026.csv", "official_paper_source_url")
+    return {
+        "pyq_rows": pyq_rows,
+        "source_rows": source_rows,
+        "question_text_rows": question_text_rows,
+        "official_paper_rows": official_paper_rows,
+        "pyq_available": pyq_rows > 0,
+        "mongo_configured": mongo_configured,
+        "notion_configured": bool(os.environ.get("NOTION_TOKEN", "").strip()),
+    }
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):

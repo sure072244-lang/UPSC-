@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends
 
 from lib.db import db
 from models.tracker import ResetOut
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/admin", tags=["admin"], dependencies=[Depends(require_auth)])
 

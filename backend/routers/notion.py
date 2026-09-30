@@ -23,7 +23,7 @@ from models.tracker import (
     NotionSyncOut,
     NotionTestOut,
 )
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/notion", tags=["notion"], dependencies=[Depends(require_auth)])
 
@@ -45,7 +45,7 @@ def _token() -> str:
 async def _notion(method: str, path: str, body: dict | None = None) -> dict:
     token = _token()
     if not token:
-        raise NotionApiError(400, "NOTION_TOKEN is not set in backend/.env")
+        raise NotionApiError(400, "NOTION_TOKEN is not configured in the deployment environment")
     headers = {
         "Authorization": f"Bearer {token}",
         "Notion-Version": NOTION_VERSION,
@@ -195,7 +195,7 @@ async def status() -> NotionStatus:
 @router.post("/test", response_model=NotionTestOut)
 async def test_connection() -> NotionTestOut:
     if not _token():
-        msg = "NOTION_TOKEN is not set in backend/.env — add it and restart the backend."
+        msg = "NOTION_TOKEN is not configured in the deployment environment. Add it to Vercel Variables and redeploy."
         await db.notion_logs.insert_one(NotionLog(action="test", mode="unconfigured", ok=False, message=msg).model_dump())
         return NotionTestOut(ok=False, message=msg)
     try:

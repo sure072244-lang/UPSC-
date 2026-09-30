@@ -13,7 +13,7 @@ from models.tracker import (
     WeaknessItem,
     WeaknessOut,
 )
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 from routers.insights import PRELIMS_DATE
 
 router = APIRouter(prefix="/analytics", tags=["analytics"], dependencies=[Depends(require_auth)])

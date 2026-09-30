@@ -5,14 +5,45 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
+from fastapi import HTTPException
 from motor.motor_asyncio import AsyncIOMotorClient
 from pymongo import ASCENDING, DESCENDING, IndexModel
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
-mongo_url = os.environ["MONGO_URL"]
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ["DB_NAME"]]
+mongo_url = os.environ.get("MONGO_URL", "").strip()
+database_name = os.environ.get("DB_NAME", "").strip()
+mongo_configured = bool(mongo_url and database_name)
+
+
+class _UnavailableDatabase:
+    def __getattr__(self, collection: str):
+        raise HTTPException(
+            status_code=503,
+            detail="MongoDB is not configured. Set MONGO_URL and DB_NAME in the deployment environment.",
+        )
+
+    def __getitem__(self, collection: str):
+        return self.__getattr__(collection)
+
+
+class _UnavailableClient:
+    def close(self) -> None:
+        return None
+
+
+if mongo_configured:
+    client = AsyncIOMotorClient(
+        mongo_url,
+        serverSelectionTimeoutMS=5000,
+        connectTimeoutMS=5000,
+    )
+    db = client[database_name]
+else:
+    client = _UnavailableClient()
+    db = _UnavailableDatabase()
+    logger = logging.getLogger(__name__)
+    logger.warning("MongoDB not configured; database-backed routes will return HTTP 503")
 
 logger = logging.getLogger(__name__)
 
@@ -63,10 +94,18 @@ INDEXES: dict[str, list[IndexModel]] = {
     "omr_runs": [IndexModel([("date", DESCENDING)], name="date_desc")],
     "devices": [IndexModel([("id", ASCENDING)], name="id", unique=True)],
     "app_meta": [IndexModel([("key", ASCENDING)], name="key", unique=True)],
+    "passkey_challenges": [
+        IndexModel([("expires_at", ASCENDING)], name="expires_at_ttl", expireAfterSeconds=0)
+    ],
+    "passkey_sessions": [
+        IndexModel([("expires_at", ASCENDING)], name="expires_at_ttl", expireAfterSeconds=0)
+    ],
 }
 
 
 async def ensure_indexes() -> None:
+    if not mongo_configured:
+        return
     for collection, models in INDEXES.items():
         for model in models:  # one at a time so a bad spec skips only itself
             try:

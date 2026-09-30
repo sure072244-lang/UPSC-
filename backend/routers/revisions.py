@@ -8,7 +8,7 @@ from pymongo import ReturnDocument
 from lib.db import db
 from lib.dates import today_iso
 from models.tracker import Revision, RevisionCreate, RevisionReview
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/revisions", tags=["revisions"], dependencies=[Depends(require_auth)])
 

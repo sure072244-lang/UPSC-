@@ -5,7 +5,7 @@ from pymongo import ReturnDocument
 
 from lib.db import db
 from models.tracker import Goal, GoalCreate, GoalUpdate
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/goals", tags=["goals"], dependencies=[Depends(require_auth)])
 

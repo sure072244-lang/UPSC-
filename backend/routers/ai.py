@@ -24,7 +24,7 @@ from models.tracker import (
     Revision,
     StudySession,
 )
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/ai", tags=["ai"], dependencies=[Depends(require_auth)])
 

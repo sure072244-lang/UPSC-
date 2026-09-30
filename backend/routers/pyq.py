@@ -20,7 +20,7 @@ from models.tracker import (
     PyqQuestionDetail,
     PyqResultItem,
 )
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/pyq", tags=["pyq"], dependencies=[Depends(require_auth)])
 

@@ -9,8 +9,6 @@ import { apiGet } from "@/lib/api";
 import type { MeOut } from "@/lib/types";
 import Login from "@/pages/Login";
 
-const APP_LOCK_ENABLED = import.meta.env.VITE_APP_LOCK_ENABLED === "true";
-
 const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const Goals = lazy(() => import("@/pages/Goals"));
 const Insights = lazy(() => import("@/pages/Insights"));
@@ -66,11 +64,8 @@ export default function App() {
     <>
       <Suspense fallback={<Splash />}>
         <Routes>
-          <Route
-            path="/login"
-            element={APP_LOCK_ENABLED ? <Login /> : <Navigate to="/" replace />}
-          />
-          <Route element={APP_LOCK_ENABLED ? <ProtectedLayout /> : <AppShell />}>
+          <Route path="/login" element={<Login />} />
+          <Route element={<ProtectedLayout />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/professor" element={<Professor />} />
             <Route path="/sessions" element={<Sessions />} />

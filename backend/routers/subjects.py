@@ -12,7 +12,7 @@ from models.tracker import (
     TopicCreate,
     TopicUpdate,
 )
-from routers.auth import require_auth
+from routers.passkeys import require_auth
 
 router = APIRouter(prefix="/subjects", tags=["subjects"], dependencies=[Depends(require_auth)])
 
