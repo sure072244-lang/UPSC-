@@ -1,17 +1,9 @@
 import { useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { CheckCircle2, Cloud, KeyRound, Lock, RefreshCw, RotateCcw, Sparkles } from "lucide-react";
+import { CheckCircle2, Cloud, RefreshCw, RotateCcw, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -26,7 +18,6 @@ import { CardShell, PageHeader } from "@/components/kit";
 import { apiPatch, apiPost } from "@/lib/api";
 import { errDetail, fmtDate, fmtMinutes } from "@/lib/format";
 import {
-  useDevices,
   useGoals,
   useNotionLogs,
   useNotionStatus,
@@ -36,8 +27,7 @@ import {
   useSubjects,
   useTests,
 } from "@/lib/queries";
-import type { DeviceOut, NotionSyncOut, NotionTestOut, Profile, ResetOut } from "@/lib/types";
-import { endSession } from "@/lib/session";
+import type { NotionSyncOut, NotionTestOut, Profile, ResetOut } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const FIELD_MAP = [
@@ -50,7 +40,6 @@ export default function Settings() {
   const qc = useQueryClient();
   const notionStatus = useNotionStatus();
   const logs = useNotionLogs();
-  const devices = useDevices();
   const profile = useProfile();
   const subjects = useSubjects();
   const sessions = useSessions();
@@ -60,10 +49,6 @@ export default function Settings() {
 
   const [form, setForm] = useState<Profile | null>(null);
   const [targetHours, setTargetHours] = useState("8");
-  const [pinOpen, setPinOpen] = useState(false);
-  const [currentPin, setCurrentPin] = useState("");
-  const [newPin, setNewPin] = useState("");
-
   useEffect(() => {
     if (profile.data && form === null) {
       setForm(profile.data);
@@ -113,16 +98,6 @@ export default function Settings() {
     onError: (error) => toast.error(errDetail(error)),
   });
 
-  const toggleDevice = useMutation({
-    mutationFn: ({ id, approved }: { id: string; approved: boolean }) =>
-      apiPatch<DeviceOut>(`/auth/devices/${id}`, { approved }),
-    onSuccess: (d) => {
-      toast.success(d.approved ? "Device approved" : "Device revoked");
-      qc.invalidateQueries({ queryKey: ["auth", "devices"] });
-    },
-    onError: (error) => toast.error(errDetail(error)),
-  });
-
   const resetProgress = useMutation({
     mutationFn: () => apiPost<ResetOut>("/admin/reset-progress"),
     onSuccess: (r) => {
@@ -132,31 +107,14 @@ export default function Settings() {
     onError: (error) => toast.error(errDetail(error)),
   });
 
-  const changePin = useMutation({
-    mutationFn: () => apiPost("/auth/pin", { current_pin: currentPin, new_pin: newPin }),
-    onSuccess: () => {
-      toast.success("Passcode updated");
-      setPinOpen(false);
-      setCurrentPin("");
-      setNewPin("");
-    },
-    onError: (error) => toast.error(errDetail(error)),
-  });
-
   const st = notionStatus.data;
-  const pinValid =
-    currentPin.length >= 4 &&
-    newPin.length >= 4 &&
-    newPin.length <= 32 &&
-    newPin === newPin.trim() &&
-    /^[A-Za-z0-9]+$/.test(newPin);
 
   return (
     <div className="mx-auto max-w-5xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
       <PageHeader
         overline="Preferences"
         title="Settings & Notion Sync"
-        description="Your profile, the Notion database bridge, and the vault passcode."
+        description="Your profile, the Notion database bridge, and study data."
       />
 
       {/* Notion sync hub */}
@@ -294,59 +252,6 @@ export default function Settings() {
         </p>
       </CardShell>
 
-      {/* Trusted devices */}
-      <CardShell title="Trusted devices" overline="Device binding" testId="devices-card">
-        <p className="mb-3 text-sm text-[#5E6258]">
-          The first device to unlock is trusted automatically. Any other device is refused until you
-          approve it here — so nobody else can open your tracker even with the PIN.
-        </p>
-        <ul className="space-y-2" data-testid="devices-list">
-          {(devices.data ?? []).length === 0 ? (
-            <li className="rounded-lg border border-dashed border-[#E8E3D7] px-3 py-3 text-center text-xs text-[#8B8F83]">
-              No devices recorded yet.
-            </li>
-          ) : (
-            (devices.data ?? []).map((d: DeviceOut) => (
-              <li
-                key={d.id}
-                data-testid={`device-${d.id}`}
-                className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#F0EDE5] px-4 py-3"
-              >
-                <div className="min-w-0">
-                  <p className="flex items-center gap-2 text-sm font-medium text-[#1C1D18]">
-                    {d.label}
-                    {d.current ? (
-                      <Badge className="border-0 bg-[#EDF5F0] font-mono text-[10px] uppercase text-[#1D4532]">
-                        this device
-                      </Badge>
-                    ) : null}
-                  </p>
-                  <p className="truncate font-mono text-[11px] text-[#8B8F83]">{d.user_agent || d.id}</p>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Badge
-                    className={cn(
-                      "border-0 font-mono text-[10px] uppercase tracking-[0.12em]",
-                      d.approved ? "bg-[#EDF5F0] text-[#1D4532]" : "bg-[#FEF3E2] text-[#8A3D04]",
-                    )}
-                  >
-                    {d.approved ? "approved" : "blocked"}
-                  </Badge>
-                  <Button
-                    size="xs"
-                    variant="outline"
-                    data-testid={`device-toggle-${d.id}`}
-                    onClick={() => toggleDevice.mutate({ id: d.id, approved: !d.approved })}
-                  >
-                    {d.approved ? "Revoke" : "Approve"}
-                  </Button>
-                </div>
-              </li>
-            ))
-          )}
-        </ul>
-      </CardShell>
-
       {/* Profile */}
       <CardShell title="Candidate profile" overline="Who is studying" testId="profile-card">
         {form === null ? (
@@ -413,23 +318,9 @@ export default function Settings() {
         )}
       </CardShell>
 
-      {/* Security */}
-      <CardShell title="Vault & data" overline="Security" testId="security-card">
+      {/* Data management */}
+      <CardShell title="Study data" overline="Maintenance" testId="security-card">
         <div className="flex flex-wrap items-center gap-3">
-          <Button
-            variant="outline"
-            data-testid="change-pin-btn"
-            onClick={() => setPinOpen(true)}
-          >
-            <KeyRound className="size-4" /> Change password
-          </Button>
-          <Button
-            variant="outline"
-            data-testid="lock-now-btn"
-            onClick={() => void endSession()}
-          >
-            <Lock className="size-4" /> Lock now
-          </Button>
           <Button
             variant="outline"
             data-testid="fresh-start-btn"
@@ -454,59 +345,6 @@ export default function Settings() {
           </p>
         </div>
       </CardShell>
-
-      <Dialog open={pinOpen} onOpenChange={setPinOpen}>
-        <DialogContent className="sm:max-w-sm">
-          <DialogHeader>
-            <DialogTitle className="font-serif text-2xl">Change password</DialogTitle>
-            <DialogDescription>
-              4–32 letters or digits. You'll need it at the next unlock.
-            </DialogDescription>
-          </DialogHeader>
-          <form
-            data-testid="pin-form"
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (pinValid) changePin.mutate();
-            }}
-            className="grid gap-4"
-          >
-            <div className="grid gap-2">
-              <Label htmlFor="pin-current">Current passcode</Label>
-              <Input
-                id="pin-current"
-                data-testid="pin-current-input"
-                type="password"
-                value={currentPin}
-                onChange={(e) => setCurrentPin(e.target.value)}
-              />
-            </div>
-            <div className="grid gap-2">
-              <Label htmlFor="pin-new">New passcode</Label>
-              <Input
-                id="pin-new"
-                data-testid="pin-new-input"
-                type="password"
-                value={newPin}
-                onChange={(e) => setNewPin(e.target.value)}
-              />
-            </div>
-            <DialogFooter>
-              <Button type="button" variant="ghost" data-testid="pin-cancel-button" onClick={() => setPinOpen(false)}>
-                Cancel
-              </Button>
-              <Button
-                type="submit"
-                data-testid="pin-save-button"
-                disabled={!pinValid || changePin.isPending}
-                className="bg-[#1D3A2C] text-white hover:bg-[#2F5E48]"
-              >
-                {changePin.isPending ? "Updating…" : "Update passcode"}
-              </Button>
-            </DialogFooter>
-          </form>
-        </DialogContent>
-      </Dialog>
 
       <p className="pb-6 text-center text-xs text-[#8B8F83]">
         Ashoka Academy · daily target {fmtMinutes(profile.data?.daily_target_minutes ?? 480)} ·

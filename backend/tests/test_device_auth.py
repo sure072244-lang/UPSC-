@@ -14,7 +14,15 @@ from routers import auth
 
 @pytest.fixture(autouse=True)
 def app_secret(monkeypatch):
+    monkeypatch.setenv("APP_LOCK_ENABLED", "true")
     monkeypatch.setenv("APP_SECRET", "test-secret-that-is-at-least-32-chars")
+
+
+@pytest.mark.asyncio
+async def test_auth_guard_is_disabled_without_lock_configuration(monkeypatch):
+    monkeypatch.setenv("APP_LOCK_ENABLED", "false")
+
+    await auth.require_auth(tracker_session=None, x_device_id=None)
 
 
 def test_unlock_requires_a_device_identity():

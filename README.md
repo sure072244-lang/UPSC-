@@ -6,9 +6,9 @@ The repository root is the Vercel project root. [`vercel.json`](vercel.json) bui
 
 1. In Vercel, import `https://github.com/sure072244-lang/UPSC-` and keep the project root set to `.`.
 2. Add MongoDB Atlas or another persistent MongoDB provider. Set `MONGO_URL` and `DB_NAME` in Vercel Environment Variables.
-3. Set `APP_SECRET` to a unique random value of at least 32 characters and `APP_PIN` to your private 4-32 character passcode. Keep `COOKIE_SECURE=true` for Vercel HTTPS. Set `APP_URL` and `CORS_ORIGINS` to the deployed Vercel origin.
-4. Add `MISTRAL_API_KEY` for Professor AI/OMR; `NOTION_TOKEN` and `NOTION_DATABASE_ID` are optional. Use [`backend/.env.example`](backend/.env.example) as the full variable checklist. Do not commit real `.env` files.
-5. Deploy, then open the new URL on the Redmi Pad SE and unlock there first. The first browser to unlock is trusted. Approve any additional devices from Settings; clearing that browser's site data creates a new device identity.
+3. AppLock is disabled by default. No PIN or `APP_SECRET` is needed. To enable it, set both `APP_LOCK_ENABLED=true` and `VITE_APP_LOCK_ENABLED=true`, then also set `APP_PIN` and a unique `APP_SECRET` of at least 32 characters. Keep `COOKIE_SECURE=true` for HTTPS.
+4. Add `MISTRAL_API_KEY` for Professor AI/OMR; `NOTION_TOKEN` and `NOTION_DATABASE_ID` are optional. Use [`backend/.env.example`](backend/.env.example) as the variable checklist. Do not commit real `.env` files.
+5. Deploy and open the new URL. With AppLock disabled, anyone who can access the public URL can read and change the tracker data; do not store sensitive information in this deployment.
 
 Vercel does not provide persistent local disk storage, so MongoDB must be external. The browser device ID is a stable browser identity, not Android hardware attestation; keep the passcode private and use the first-device approval flow.
 
@@ -18,14 +18,14 @@ This repository contains the UPSC PYQ study app: React/Vite frontend, FastAPI ba
 
 1. Create a Railway project and deploy this repository.
 2. Add MongoDB or use an external MongoDB provider. Set `MONGO_URL` to its connection URI and `DB_NAME` to the database name.
-3. Generate a unique `APP_SECRET` of at least 32 characters and set a private `APP_PIN` of 4-32 letters or digits. The app no longer has an insecure default PIN or signing key.
+3. AppLock is disabled by default. To enable it, set both `APP_LOCK_ENABLED=true` and `VITE_APP_LOCK_ENABLED=true`, then also set `APP_PIN` and a unique `APP_SECRET` of at least 32 characters.
 4. Set `APP_URL` to the Railway public domain and `CORS_ORIGINS` to that same origin. Add `MISTRAL_API_KEY` to enable Professor AI and OMR vision. `NOTION_TOKEN` and `NOTION_DATABASE_ID` are optional for Notion sync.
 5. Use [`backend/.env.example`](backend/.env.example) as the variable checklist, but enter values in Railway's Variables panel. Never upload a real `.env` file.
 
 Railway detects the root `Dockerfile`, uses the platform `PORT`, and checks `/api/` for health. No local `.env` file is required or included in the deployment image. Configure a persistent external MongoDB service before using the app; the container filesystem is ephemeral.
 
-The study app includes a React/Vite frontend, FastAPI/MongoDB backend, PIN vault,
-study tracking, PYQ practice, spaced revision, mock tests, analytics, optional
+The study app includes a React/Vite frontend, FastAPI/MongoDB backend, optional
+AppLock, study tracking, PYQ practice, spaced revision, mock tests, analytics, optional
 AI/OMR, and Notion sync.
 
 ## Layout

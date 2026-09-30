@@ -18,6 +18,15 @@ COOKIE_NAME = "tracker_session"
 ALGORITHM = "HS256"
 
 
+def _lock_enabled() -> bool:
+    return os.environ.get("APP_LOCK_ENABLED", "false").strip().lower() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+
+
 def _secret() -> str:
     secret = os.environ.get("APP_SECRET", "").strip()
     if len(secret) < 32:
@@ -53,6 +62,8 @@ async def require_auth(
     tracker_session: str | None = Cookie(default=None, alias=COOKIE_NAME),
     x_device_id: str | None = Header(default=None, alias="X-Device-Id"),
 ) -> None:
+    if not _lock_enabled():
+        return
     if not tracker_session or not x_device_id or not 16 <= len(x_device_id) <= 128:
         raise HTTPException(status_code=401, detail="Vault is locked")
     try:

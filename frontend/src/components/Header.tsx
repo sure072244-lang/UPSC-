@@ -8,7 +8,6 @@ import {
   LayoutDashboard,
   Library,
   LineChart,
-  Lock,
   Menu,
   Plus,
   Radar,
@@ -21,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import SessionDialog from "@/components/SessionDialog";
 import { ChakraMark } from "@/components/kit";
-import { endSession } from "@/lib/session";
 import { cn } from "@/lib/utils";
 
 // Colour-coded navigation — each section owns a hue so the eye finds it instantly.
@@ -54,7 +52,7 @@ export default function Header() {
               Professor 🥼
             </span>
             <span className="hidden font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-[#8C6212] sm:block">
-              UPSC CSE 2027 · private tracker
+              UPSC CSE 2027 · study tracker
             </span>
           </span>
         </Link>
@@ -90,16 +88,6 @@ export default function Header() {
           >
             <Plus className="size-4" />
             <span className="hidden sm:inline">Log</span>
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            data-testid="lock-button"
-            onClick={() => void endSession()}
-            aria-label="Lock the vault"
-            title="Lock the vault"
-          >
-            <Lock className="size-4" />
           </Button>
           <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
             <SheetTrigger
