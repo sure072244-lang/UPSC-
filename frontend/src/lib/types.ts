@@ -308,6 +308,21 @@ export interface ResearchDashboard {
     total_papers: number;
     papers: Record<string, string | number>[];
   };
+  post_2026: {
+    quiz_stream: Record<string, string>[];
+    source_registry: Record<string, string>[];
+    mock_ecosystem: Record<string, string>[];
+    mock_intelligence: Record<string, string>[];
+    external_calibration: Record<string, string>[];
+    findings: {
+      cutoff: string;
+      purpose: string;
+      rules: string[];
+      latest_2026_style_signals: Record<string, unknown>;
+      ecosystem_signals: (string | Record<string, unknown>)[];
+      engine_implications: (string | Record<string, unknown>)[];
+    };
+  };
   coverage: {
     prelims_questions: number;
     prelims_years: string;
@@ -322,6 +337,10 @@ export interface ResearchDashboard {
     mains_trend_independently_verified: boolean;
     scheduled_test_papers: number;
     schedule_is_upsc_official: boolean;
+    post_2026_quiz_signals: number;
+    post_2026_sources: number;
+    mock_providers: number;
+    external_2026_calibration_rows: number;
   };
 }
 

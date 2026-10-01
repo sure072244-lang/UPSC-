@@ -22,6 +22,12 @@ async def test_research_dashboard_reports_bundled_coverage_and_provenance():
     assert report["coverage"]["mains_trend_independently_verified"] is False
     assert report["coverage"]["scheduled_test_papers"] == 46
     assert report["coverage"]["schedule_is_upsc_official"] is False
+    assert report["coverage"]["post_2026_quiz_signals"] == 6
+    assert report["coverage"]["post_2026_sources"] == 17
+    assert report["coverage"]["mock_providers"] == 7
+    assert report["coverage"]["external_2026_calibration_rows"] == 7
+    assert len(report["post_2026"]["findings"]["rules"]) == 6
+    assert len(report["post_2026"]["findings"]["engine_implications"]) == 5
 
 
 @pytest.mark.asyncio

@@ -52,6 +52,12 @@ async def dashboard() -> dict[str, Any]:
     schedule = _json_file("schedule_2027_v1.json")
     yearly_prelims = _csv_file("subject_by_year_2014_2026.csv")
     recurrence = _csv_file("subtopic_recurrence_2014_2026.csv")
+    quiz_stream = _csv_file("current_quiz_stream_post_2026_v3.csv")
+    source_registry = _csv_file("research_sources_post_2026_v3.csv")
+    mock_ecosystem = _csv_file("post_2026_mock_ecosystem_v2.csv")
+    mock_intelligence = _csv_file("POST_2026_PRELIMS_MOCK_INTELLIGENCE_2026_27_v1.csv")
+    external_calibration = _csv_file("external_2026_calibration.csv")
+    post_2026_findings = _json_file("research_findings_post_2026_v3.json")
     optional_labels = [
         entry["label"] for entry in taxonomy if entry.get("group") == "Optional"
     ]
@@ -68,6 +74,14 @@ async def dashboard() -> dict[str, Any]:
         "weightage": weightage,
         "subject_catalog": taxonomy,
         "schedule": schedule,
+        "post_2026": {
+            "quiz_stream": quiz_stream,
+            "source_registry": source_registry,
+            "mock_ecosystem": mock_ecosystem,
+            "mock_intelligence": mock_intelligence,
+            "external_calibration": external_calibration,
+            "findings": post_2026_findings,
+        },
         "coverage": {
             "prelims_questions": pyq_summary.get("nominal_questions", 0),
             "prelims_years": pyq_summary.get("scope", ""),
@@ -80,5 +94,9 @@ async def dashboard() -> dict[str, Any]:
             "mains_trend_independently_verified": False,
             "scheduled_test_papers": schedule.get("total_papers", 0),
             "schedule_is_upsc_official": False,
+            "post_2026_quiz_signals": len(quiz_stream),
+            "post_2026_sources": len(source_registry),
+            "mock_providers": len(mock_ecosystem),
+            "external_2026_calibration_rows": len(external_calibration),
         },
     }

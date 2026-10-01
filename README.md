@@ -22,6 +22,7 @@ The active app bundles its runtime data under `backend/data`, so the same datase
 - Prelims master: 1,300 classified questions for 2014–2026, with a separate 1,300-row source trail and official paper links.
 - Enriched question text: 1,198 active-ID matches marked `FULL_TEXT`, 100 marked `TOPIC_TITLE_ONLY`, and 2 active IDs without a research-text match. The detail API serves wording only for `FULL_TEXT` rows; use the official paper link for the rest.
 - Prelims analytics: subject-by-year counts and 174 subtopic-recurrence rows.
+- Post-2026 research: 6 public quiz signals, 17 source-registry entries, 7 mock-ecosystem providers, 7 external calibration rows, 6 evidence rules and 5 study-engine implications.
 - Mains research: 60 topic rows across GS-I–IV and 2013–2026. These values were transcribed from supplied screenshots, are not independently verified, and can overlap across composite topic labels; they are research signals, not official UPSC weightage.
 - Subject taxonomy: 23 labels across Prelims, Mains and cross-cutting areas. The supplied files contain only a `Philosophy Optional` label, not full topic-by-topic optional syllabi.
 - 2027 planning schedule: 46 mock-test records from a supplied workbook; this is a study plan, not an official UPSC timetable.
